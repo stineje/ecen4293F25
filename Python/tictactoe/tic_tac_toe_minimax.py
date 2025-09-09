@@ -237,6 +237,7 @@ if __name__ == "__main__":
     if ans.strip().lower() not in ('y', 'yes'):
         print("Goodbye.")
         exit()
+    print()        
 
     # 1) Perfect vs Perfect (should draw every time) -- seeds are random
     s1 = simulate(1000, ai_perfect, ai_perfect, log_first_game=True, seed=123)

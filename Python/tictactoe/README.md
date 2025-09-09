@@ -5,7 +5,7 @@ Inspired by *WarGames* (1983) — one of my favorite movies — and the iconic l
 
 > *“A strange game. The only winning move is not to play.”*
 
-This was given as an in-class assignment during my ecen4293 Class
+This was given as an in-class assignment during my ecen4293 class
 
 ## Movie Clips
 - [War Games Film Clip with IMSAI computer](https://youtu.be/YIh41wZEd5c?si=wAICzz-fUdx2BgQI)  

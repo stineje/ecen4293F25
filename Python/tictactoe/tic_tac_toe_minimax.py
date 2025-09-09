@@ -1,3 +1,10 @@
+# ============================================================
+#   Tic-Tac-Toe Simulator
+#   Author : James Stine
+#   Date   : September 8, 2025
+#   Notes  : AI simulation of Tic-Tac-Toe strategies
+# ============================================================
+
 import random
 import math
 

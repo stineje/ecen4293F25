@@ -1,6 +1,7 @@
 # ============================================================
 #   Tic-Tac-Toe Simulator
 #   Author : James Stine
+#   Institution : Oklahoma State University
 #   Date   : September 8, 2025
 #   Notes  : all manual play
 # ============================================================

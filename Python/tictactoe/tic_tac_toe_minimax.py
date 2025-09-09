@@ -188,7 +188,7 @@ def simulate(n_games, ai_X, ai_O, log_first_game=True, seed=None):
     # Average score from X’s perspective: +1 win, 0 draw, −1 loss
     avg_score_x = (wins_X - wins_O) / n_games if n_games else 0.0
 
-    # 95% CI for X win rate (normal approximation)
+    # 95% Confidence Interval (CI) for X win rate (normal approximation)
     p = wins_X / n_games if n_games else 0.0
     se = math.sqrt(p * (1 - p) / n_games) if n_games else 0.0
     ci_low = max(0.0, p - 1.96 * se)
@@ -238,7 +238,7 @@ if __name__ == "__main__":
         print("Goodbye.")
         exit()
 
-    # 1) Perfect vs Perfect (should draw every time)
+    # 1) Perfect vs Perfect (should draw every time) -- seeds are random
     s1 = simulate(1000, ai_perfect, ai_perfect, log_first_game=True, seed=123)
     print("Perfect vs Perfect:")
     print_summary(s1)

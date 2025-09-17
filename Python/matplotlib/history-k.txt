@@ -1,0 +1,1000 @@
+ 1017  cd /export
+ 1018  ls
+ 1019  cd drive2/
+ 1020  ls
+ 1021  rm -rf cvw/
+ 1022  history | grep clone
+ 1023  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1024  cd cvw/
+ 1025  ls
+ 1026  cd
+ 1027  sftp jstine@yurisha.atrc.okstate.edu:/export/disk2/jstine/cvw/tests/riscof/spike/spike*yaml
+ 1028  sftp jstine@yurisha.atrc.okstate.edu:/export/disk2/jstine/cvw/tests/riscof/spike/*.yaml
+ 1029  ls -la
+ 1030  ls -latr
+ 1031  ls cvw/tests/riscof/spike/
+ 1032  ls -la cvw/tests/riscof/spike/
+ 1033  sftp jstine@yurisha.atrc.okstate.edu:/export/disk2/jstine/cvw/tests/riscof/spike/riscof
+ 1034  sftp jstine@yurisha.atrc.okstate.edu:/export/disk2/jstine/cvw/tests/riscof/spike/riscof*
+ 1035  cd cvw/tests/riscof/spike/
+ 1036  ls
+ 1037  ls -la
+ 1038  cp ~/riscof_spike.py .
+ 1039  cp ~/spike_rv??gc* .
+ 1040  ls -latr
+ 1041  cd ..
+ 1042  source setup.sh
+ 1043  ls -la
+ 1044  echo $WALLY
+ 1045  echo $LD_LIBRARY_PATH 
+ 1046  cd sim
+ 1047  ls
+ 1048  make
+ 1049  l s-la /opt/riscv/
+ 1050  cd /opt/riscv/
+ 1051  ls -la
+ 1052  cd sail-riscv/
+ 1053  more ~/cvw/bin/wally-tool-chain-install.sh 
+ 1054  sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV64 /usr/bin/riscv_sim_RV64
+ 1055  sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV32 /usr/bin/riscv_sim_RV32
+ 1056  ls -la /usr/bin/r*
+ 1057  ls -la /usr/bin/riscv*
+ 1058  cd
+ 1059  cd cvw/sim
+ 1060  ls
+ 1061  make
+ 1062  history | grep export
+ 1063  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin
+ 1064  cd
+ 1065  cd ecen4243S24/lab1/examples/asm/
+ 1066  ls
+ 1067  cd example/
+ 1068  make clean
+ 1069  make
+ 1070  cd
+ 1071  cd cvw/sim
+ 1072  ls
+ 1073  make
+ 1074  cd /opt/riscv/riscv-gnu-toolchain/
+ 1075  sudo git log --stat
+ 1076  ls -la
+ 1077  ls
+ 1078  cd /opt/riscv
+ 1079  ls -la
+ 1080  cd riscv-gnu-toolchain/
+ 1081  sudo git log --stat
+ 1082  ls -la
+ 1083  cd ..
+ 1084  ls -la
+ 1085  cd /opt/riscv/riscv-gnu-toolchain/
+ 1086  ls
+ 1087  sudo git log --stat
+ 1088  cd
+ 1089  ls -latr /opt/riscv/
+ 1090  su
+ 1091  sudo passwd
+ 1092  su
+ 1093  adduser karsoyo
+ 1094  sudo adduser karsoyo
+ 1095  ls
+ 1096  ls -la
+ 1097  ls
+ 1098  mv cvw cvw2
+ 1099  history | grep clone
+ 1100  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1101  cd cvw
+ 1102  ls
+ 1103  source setup.sh 
+ 1104  source ~/okstate.sh 
+ 1105  cd sim
+ 1106  ls
+ 1107  make
+ 1108  history | grep export
+ 1109  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin
+ 1110  make
+ 1111  history | grep checkout
+ 1112  ls
+ 1113  ls /home
+ 1114  sudo usermod -aG sudeo karsoyo
+ 1115  sudo usermod -aG sudo karsoyo
+ 1116  w
+ 1117  cd /opt/riscv
+ 1118  ls -la
+ 1119  cd
+ 1120  sudo rm -rf /opt/riscv
+ 1121  history | grep checkout
+ 1122  cd cvw/bin/
+ 1123  ls
+ 1124  cp wally-tool-chain-install.sh wally.sh
+ 1125  emacs wally.sh
+ 1126  ls
+ 1127  ls -la
+ 1128  rm -i *~
+ 1129  sudo ./wally.sh
+ 1130  ls
+ 1131  more wally.sh
+ 1132  cd /opt/riscv
+ 1133  ls -la
+ 1134  sudo chown jstine .
+ 1135  cat ~/cvw/bin/wally-tool-chain-install.sh 
+ 1136  eval $(opam config env)
+ 1137  git clone https://github.com/riscv/sail-riscv.git
+ 1138  cd sail-riscv
+ 1139  ls
+ 1140  ls -la
+ 1141  ARCH=64 make c_emulator/riscv_sim_RV64
+ 1142  ARCH=32 make c_emulator/riscv_sim_RV32
+ 1143  ls -la c_emulator/riscv*
+ 1144  cat ~/cvw/bin/wally-tool-chain-install.sh 
+ 1145  sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV32 /usr/bin/riscv_sim_RV32
+ 1146  ls -la /usr/bin/riscv*
+ 1147  cd
+ 1148  cd cvw
+ 1149  rm /usr/bin/riscv_sim_RV32
+ 1150  sudo rm /usr/bin/riscv_sim_RV32
+ 1151  sudo rm /usr/bin/riscv_sim_RV64
+ 1152  source setup.sh
+ 1153  echo $RISCV
+ 1154  sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV32 /usr/bin/riscv_sim_RV32
+ 1155  sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV64 /usr/bin/riscv_sim_RV64
+ 1156  ls -la /usr/bin/riscv*
+ 1157  ls
+ 1158  cd /opt/riscv
+ 1159  ls -la
+ 1160  cd
+ 1161  cd cvw/
+ 1162  ls
+ 1163  cd sim
+ 1164  ls
+ 1165  cd
+ 1166  ls
+ 1167  ls -latr
+ 1168  date
+ 1169  mv cvw cvw2
+ 1170  ls -latr
+ 1171  history | grep clone
+ 1172  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1173  cd cvw
+ 1174  ls
+ 1175  df -h
+ 1176  ls -la
+ 1177  emacs setup.sh 
+ 1178  source setup.sh
+ 1179  source ~/okstate.sh 
+ 1180  ls
+ 1181  cd sim
+ 1182  ls
+ 1183  make
+ 1184  history | grep export
+ 1185  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin
+ 1186  make
+ 1187  ls
+ 1188  source ~/okstate.sh 
+ 1189  ./regression-wally 
+ 1190  ls
+ 1191  adduser thkidd
+ 1192  sudo adduser thkidd
+ 1193  usermod -aG sudo thkidd
+ 1194  sudo usermod -aG sudo thkidd
+ 1195  pwd
+ 1196  sudo passwd thkidd
+ 1197  cd
+ 1198  cd cvw
+ 1199  cd tests/riscof/spike/
+ 1200  ls
+ 1201  ls -la
+ 1202  cat riscof_spike.py | grep ZBK
+ 1203  cat riscof_spike.py | grep K
+ 1204  ls -la
+ 1205  cd ..
+ 1206  ls -la
+ 1207  cd
+ 1208  ls
+ 1209  cd ecen4243S24/
+ 1210  ls
+ 1211  cd
+ 1212  cd cvw
+ 1213  ls
+ 1214  source setup.sh
+ 1215  cd
+ 1216  cd ecen4243S24/lab2/
+ 1217  ls
+ 1218  cd examples/
+ 1219  cd asm/example/
+ 1220  ls
+ 1221  make clean
+ 1222  make
+ 1223  history | grep export
+ 1224  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin
+ 1225  make
+ 1226  ls
+ 1227  ls -la
+ 1228  cd
+ 1229  cd ecen4243S24/lab2/
+ 1230  ls
+ 1231  cd hdl
+ 1232  more riscv_single.sv
+ 1233  ls -la
+ 1234  cd
+ 1235  ls
+ 1236  log 
+ 1237  last
+ 1238  ssh jstine@10.203.12.45
+ 1239  ssh jstine@
+ 1240  ssh jstine@10.203.29.107
+ 1241  ssh jstine@10.203.8.203
+ 1242  ssh jstine@10.203.12.45
+ 1243  ls
+ 1244  history | grep sssh
+ 1245  history | grep ssh
+ 1246  ssh jstine@sanada
+ 1247  ls
+ 1248  ssh jstine@shima.atrc.okstate.edu
+ 1249  ssh jstine@wally-gpu.atrc.okstate.edu
+ 1250  ssh jstine@sado.atrc.okstate.edu
+ 1251  history | grep ssh
+ 1252  cd /opt/riscv
+ 1253  ls -la
+ 1254  more ~/cvw/bin/wally-tool-chain-install.sh 
+ 1255  ls
+ 1256  ls /export
+ 1257  ls /export/drive2/
+ 1258  w
+ 1259  ls /export/drive2/
+ 1260  mkdir  /export/drive2/jstine
+ 1261  ls
+ 1262  ls ~
+ 1263  more ~/cvw/bin/wally-tool-chain-install.sh 
+ 1264  ls -la
+ 1265  finger karsoyo
+ 1266  clone rm -rf riscv-gnu-toolchain/
+ 1267  sudo rm -rf riscv-gnu-toolchain/
+ 1268  sudo git clone https://github.com/riscv/riscv-gnu-toolchain
+ 1269  cd riscv-gnu-toolchain/
+ 1270  more ~/cvw/bin/wally-tool-chain-install.sh 
+ 1271  sudo ./configure --prefix=${RISCV} --with-multilib-generator="rv32e-ilp32e--;rv32i-ilp32--;rv32im-ilp32--;rv32iac-ilp32--;rv32imac-ilp32--;rv32imafc-ilp32f--;rv32imafdc-ilp32d--;rv64i-lp64--;rv64ic-lp64--;rv64iac-lp64--;rv64imac-lp64--;rv64imafdc-lp64d--;rv64im-lp64--;"
+ 1272  sudo make -j 16
+ 1273  make distclean
+ 1274  sudo make distclean
+ 1275  ls -la
+ 1276  git pull
+ 1277  sudo git pull
+ 1278  sudo make -j 16
+ 1279  l s-la
+ 1280  ls -la
+ 1281  cd ..
+ 1282  ls -la
+ 1283  cd ..
+ 1284  git rm -rf riscv
+ 1285  sudo rm -rf riscv
+ 1286  cd
+ 1287  mv cvw cvw3
+ 1288  ls
+ 1289  history | grep clone
+ 1290  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1291  df -h
+ 1292  ls
+ 1293  cd cvw
+ 1294  ls
+ 1295  cd bin
+ 1296  ls
+ 1297  cp wally-tool-chain-install.sh wally.sh
+ 1298  emacs wally.sh
+ 1299  ls
+ 1300  chmod 700 wally.sh
+ 1301  sudo ./wally.sh
+ 1302  emacs wally.sh
+ 1303  sudo ./wally.sh
+ 1304  cp wally-tool-chain-install.sh wally2.sh
+ 1305  emacs wally2.sh 
+ 1306  cat wally2.sh
+ 1307  eval $(opam config env)
+ 1308  cd /opt/riscv
+ 1309  ls -la
+ 1310  chown jstine .
+ 1311  sudo chown jstine .
+ 1312  git clone https://github.com/riscv/sail-riscv.git
+ 1313  cd sail-riscv/
+ 1314  ls
+ 1315  echo $RISCV
+ 1316  export RISCV=/opt/riscv
+ 1317  ls -la
+ 1318  ARCH=64 make c_emulator/riscv_sim_RV64
+ 1319  ARCH=32 make c_emulator/riscv_sim_RV32
+ 1320  ls -la
+ 1321  ls -la c_emulator/RI*
+ 1322  ls -la c_emulator/
+ 1323  cat ~/cvw/bin/wally2.sh
+ 1324  rm -rf /usr/bin/riscv_sim_RV32 
+ 1325  sudo rm -rf /usr/bin/riscv_sim_RV32 
+ 1326  sudo rm -rf /usr/bin/riscv_sim_RV64 
+ 1327  echo $RISCV
+ 1328  sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV64 /usr/bin/riscv_sim_RV64
+ 1329  sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV32 /usr/bin/riscv_sim_RV32
+ 1330  ls -la /usr/bin/riscvz8
+ 1331  ls -la /usr/bin/riscv*
+ 1332  cd
+ 1333  ls
+ 1334  cd cvw
+ 1335  ls
+ 1336  emacs setup.sh
+ 1337  emacs site-setup.
+ 1338  source setup.sh
+ 1339  cd sim
+ 1340  ls
+ 1341  make
+ 1342  cd ..
+ 1343  ls
+ 1344  cd cvw
+ 1345  source setup.sh
+ 1346  cd sim
+ 1347  make
+ 1348  history | grep export
+ 1349  echo $PATH
+ 1350  history | grep export > ~/path-issue.txt
+ 1351  echo $PATH
+ 1352  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin
+ 1353  make
+ 1354  cd ../addins/
+ 1355  ls
+ 1356  cd riscv-arch-test/
+ 1357  git branch
+ 1358  git checkout main
+ 1359  git pull
+ 1360  cd ..
+ 1361  cd sim
+ 1362  ls
+ 1363  make
+ 1364  ls
+ 1365  source ~/okstate.sh 
+ 1366  ./regression-wally 
+ 1367  ls -la
+ 1368  cd ..
+ 1369  ls
+ 1370  cd ..
+ 1371  ls
+ 1372  git clone git@github.com:riscv/riscv-crypto.git
+ 1373  cd riscv-crypto/
+ 1374  ls
+ 1375  more README.md 
+ 1376  ls -la
+ 1377  more tools/README.md 
+ 1378  source bin/conf.sh 
+ 1379  source tools/clone.sh 
+ 1380  ls -la
+ 1381  more tools/README.md 
+ 1382  ./tools/binutils-apply.sh 
+ 1383  cd cvw
+ 1384  source setup.sh
+ 1385  cd ..
+ 1386  cd riscv-crypto/
+ 1387  source bin/conf.sh
+ 1388  more README.md 
+ 1389  more tools/README.md 
+ 1390  ssh jstine@flandre.ecen.okstate.edu
+ 1391  ls
+ 1392  ls -la
+ 1393  more tools/README.md 
+ 1394  cd tools
+ 1395  ls
+ 1396  cd ..
+ 1397  ./tools/toolchain-build.sh 
+ 1398  source bin/conf.sh 
+ 1399  ls
+ 1400  ./tools/toolchain-build.sh 
+ 1401  ls build/
+ 1402  ls -la
+ 1403  more README.md 
+ 1404  more tools/README.md 
+ 1405  sh tools/toolchain-conf.sh 
+ 1406  sh tools/toolchain-build.sh 
+ 1407  source tools/toolchain-conf.sh 
+ 1408  cd cvw
+ 1409  source setup.sh
+ 1410  cd ..
+ 1411  ls
+ 1412  ls -latr
+ 1413  cd riscv-crypto/
+ 1414  source bin/conf.sh 
+ 1415  source tools/toolchain-build.sh 
+ 1416  cd cvw
+ 1417  source setup.sh
+ 1418  cd ..
+ 1419  ls -latr
+ 1420  cd riscv-crypto/
+ 1421  ls -la
+ 1422  more tools/README.md 
+ 1423  source tools/pk-conf.sh 
+ 1424  cd riscv-crypto/
+ 1425  source bin/conf.sh 
+ 1426  source tools/pk-conf.sh 
+ 1427  more tools/README.md 
+ 1428  cd ..
+ 1429  more tools/README.md 
+ 1430  cd ..
+ 1431  more tools/README.md 
+ 1432  cd riscv-crypto/
+ 1433  source bin/conf.sh 
+ 1434  source tools/pk-build.sh 
+ 1435  cd riscv-crypto/
+ 1436  source bin/conf.sh 
+ 1437  cd tools
+ 1438  more README.md 
+ 1439  cd ..
+ 1440  source tools/spike-conf.sh 
+ 1441  cd riscv-crypto/
+ 1442  source bin/conf.sh 
+ 1443  source tools/spike-build.sh 
+ 1444  cd riscv-crypto/
+ 1445  source bin/conf.sh 
+ 1446  ls tools
+ 1447  ls build/
+ 1448  more tools/README.md 
+ 1449  ls -la
+ 1450  more README.md 
+ 1451  cd benchmarks/
+ 1452  ls -la
+ 1453  more README.md 
+ 1454  which riscv64-unknown-elf-gcc
+ 1455  make all CONFIG=rv32-baseline-b
+ 1456  more README.md 
+ 1457  make all CONFIG=rv32-baseline
+ 1458  more README.md 
+ 1459  make all CONFIG=rv32-zscrypto
+ 1460  more README.md 
+ 1461  qmake all CONFIG=rv64-baseline-b
+ 1462  make all CONFIG=rv64-baseline-b
+ 1463  more README.md 
+ 1464  make all CONFIG=rv64-baseline
+ 1465  more README.md 
+ 1466  make all CONFIG=rv64-zscrypto
+ 1467  make all CONFIG=rv32-baseline
+ 1468  make all CONFIG=rv32-baseline-b
+ 1469  more README.md 
+ 1470  make all CONFIG=rv64-baseline-b
+ 1471  more README.md 
+ 1472  make CONFIG=rv64-baseline run
+ 1473  cd ..
+ 1474  ls
+ 1475  more Makefile 
+ 1476  make CONFIG=rv64-baseline run
+ 1477  cd benchmarks/
+ 1478  ls
+ 1479  more README.md 
+ 1480  make CONFIG=rv64-baseline run
+ 1481  make all CONFIG=rv64-zscrypto
+ 1482  make CONFIG=rv64-baseline run
+ 1483  more README.md 
+ 1484  make CONFIG=rv64-baseline-b run
+ 1485  ssh jstine@bobcat.ecen.okstate.edu
+ 1486  ssh root@bobcat.ecen.okstate.edu
+ 1487  cd riscv-cy
+ 1488  cd riscv-crypto/
+ 1489  source bin/conf.sh 
+ 1490  ls
+ 1491  cd benchmarks/
+ 1492  ls
+ 1493  more README.md 
+ 1494  make CONFIG=rv64-baseline print-run-targets
+ 1495  make CONFIG=rv64-baseline run-test-aes_128_ttable
+ 1496  make CONFIG=rv64-baseline run
+ 1497  pip3 uninstall crypto
+ 1498  pip3 install crypto
+ 1499  pip3 install pycrypto
+ 1500  make CONFIG=rv64-baseline run
+ 1501  more README.md 
+ 1502  make all CONFIG=rv32-baseline-b
+ 1503  sudo apt-get install ia32-libs 
+ 1504  sudo apt install lib32z1
+ 1505  sudo apt-get install ia32-libs 
+ 1506  sudo apt-get install ia32z1
+ 1507  make all CONFIG=rv32-baseline-b
+ 1508  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+ 1509  make all CONFIG=rv32-baseline-b
+ 1510  make all CONFIG=rv32-baseline
+ 1511  make CONFIG=rv64-baseline run
+ 1512  pip uninstall pycrypto
+ 1513  pip install pycryptodome
+ 1514  make CONFIG=rv64-baseline run
+ 1515  more README.md 
+ 1516  make CONFIG=rv64-baseline-b run
+ 1517  more README.md 
+ 1518  make CONFIG=rv64-zscrypto run
+ 1519  ls -la
+ 1520  emacs ~/crypto-notes
+ 1521  ls -la
+ 1522  l s-la
+ 1523  make CONFIG=rv64-zscrypto run
+ 1524  ls -la
+ 1525  more README.md 
+ 1526  ls -la
+ 1527  make CONFIG=rv64-zscrypto run
+ 1528  more README.md 
+ 1529  make all CONFIG=rv32-baseline-b
+ 1530  history | grep apt
+ 1531  echo $LD_LIBRARY_PATH
+ 1532  more ~/.bashrc 
+ 1533  emacs ~/.ssh/known_hosts
+ 1534  rm ~/.ssh/known_hosts
+ 1535  ssh jstine@stone.atrc.okstate.edu
+ 1536  ssh jstine@yukari.ecen.okstate.edu
+ 1537  export LD_LIBRARY_PATH=/usr/lib:/lib:/usr/local/lib
+ 1538  cd ..
+ 1539  source bin/conf.sh 
+ 1540  echo $LD_LIBRARY_PATH 
+ 1541  cd benchmarks/
+ 1542  make all CONFIG=rv32-baseline-b
+ 1543  export LD_LIBRARY_PATH=/usr/lib:/lib:/usr/local/lib:/usr/lib64
+ 1544  make all CONFIG=rv32-baseline-b
+ 1545  sudo apt-get install lib64z1
+ 1546  make all CONFIG=rv32-baseline-b
+ 1547  cd riscv-crypto/
+ 1548  source bin/conf.sh 
+ 1549  cd benchmarks/
+ 1550  make all CONFIG=rv64-baseline-b
+ 1551  more README.md 
+ 1552  make CONFIG=rv64-baseline run
+ 1553  make CONFIG=rv64-baseline-b run
+ 1554  ls
+ 1555  ls -la
+ 1556  ls sha3/
+ 1557  ls sha3/fips202.c
+ 1558  more sha3/fips202.c
+ 1559  ls -la
+ 1560  cd cvw
+ 1561  ls
+ 1562  w
+ 1563  cd /opt
+ 1564  ls -la
+ 1565  cd riscv
+ 1566  ls -la
+ 1567  cd
+ 1568  ls
+ 1569  cd riscv-crypto/
+ 1570  ls
+ 1571  ls -la
+ 1572  ls bin/
+ 1573  more bin/better_parse_opcodes.py 
+ 1574  ls
+ 1575  ls -la
+ 1576  source bin/conf.sh 
+ 1577  ls -la
+ 1578  cd benchmarks/
+ 1579  ls -la
+ 1580  more README.md 
+ 1581  -----------------------------------------------------------
+ 1582  James E. Stine, Jr., Ph.D.
+ 1583  Edward Joullian Endowed Chair and Professor in Engineering
+ 1584  Oklahoma State University
+ 1585  School of Electrical and Computer Engineering
+ 1586  VLSI Computer Architecture Research Group
+ 1587  215 General Academic Building
+ 1588  Stillwater, OK 74078 USA
+ 1589  E-mail: james.stine@okstate.edu
+ 1590  Phone: (405) 744-9244
+ 1591  Research URL: http://vlsiarch.ecen.okstate.edu 
+ 1592  BouldinList URL: http://bouldinlist.ecen.okstate.edu
+ 1593  -----------------------------------------------------------
+ 1594  make CONFIG=rv64-baseline run
+ 1595  ls -latr
+ 1596  ls -latr permutation/
+ 1597  ls aes/
+ 1598  ls -la
+ 1599  cd
+ 1600  ls aes
+ 1601  ls
+ 1602  ls -la
+ 1603  df -h
+ 1604  du -sh
+ 1605  cd cvw
+ 1606  ls
+ 1607  source setup.sh
+ 1608  verilator --version
+ 1609  ssh jstine@yukari.ecen.okstate.edu
+ 1610  w
+ 1611  cd
+ 1612  ./update.sh 
+ 1613  ls
+ 1614  ssh jstine@sado.atrc.okstate.edu
+ 1615  df -h
+ 1616  ls -la
+ 1617  fwupdmgr get-upgrades
+ 1618  ./update.sh 
+ 1619  w
+ 1620  sudo reboot
+ 1621  ls
+ 1622  cd riscv-crypto/
+ 1623  ls
+ 1624  source bin/conf.sh 
+ 1625  ls
+ 1626  cd benchmarks/
+ 1627  more README.md 
+ 1628  make CONFIG=rv64-zscrypto run
+ 1629  history | grep apt
+ 1630  ls ../bin/
+ 1631  ls ../buy
+ 1632  ls ../build/
+ 1633  ls ../build/benchmarks/
+ 1634  ls ../build/benchmarks/rv64-zscrypto/
+ 1635  ls ../build/benchmarks/rv64-zscrypto/bin/
+ 1636  ls ../build/benchmarks/rv64-zscrypto/bin/test/test_
+ 1637  ls ../build/benchmarks/rv64-zscrypto/bin/test/
+ 1638  cd ..
+ 1639  ls
+ 1640  cd benchmarks/
+ 1641  ls
+ 1642  cd aes
+ 1643  ls
+ 1644  more zscrypto_rv64/aes_256_ks.S 
+ 1645  ls
+ 1646  cd ..
+ 1647  ls -la
+ 1648  ls rtl/
+ 1649  ls rtl/crypto-fu/
+ 1650  ls rtl/crypto-fu/riscv_crypto_fu_aes_mix_columns.v 
+ 1651  more rtl/crypto-fu/riscv_crypto_fu_aes_mix_columns.v 
+ 1652  ls
+ 1653  ls -la
+ 1654  cd
+ 1655  ls
+ 1656  df -h
+ 1657  ssh jstine@yukari.ecen.okstate.edu
+ 1658  w
+ 1659  fwupdmgr get-upgrades
+ 1660  ./update.sh 
+ 1661  sudo reboot
+ 1662  ls
+ 1663  cd cvw/src/ieu/
+ 1664  ls
+ 1665  cd bmu/
+ 1666  ls
+ 1667  more bitmanipalu.sv 
+ 1668  ls -la /opt/riscv/
+ 1669  ls
+ 1670  cd cvw
+ 1671  git pull
+ 1672  cd ..
+ 1673  ls
+ 1674  mv cvw cvw4
+ 1675  history | grep clone
+ 1676  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1677  cd cvw
+ 1678  cd sim
+ 1679  ls
+ 1680  make
+ 1681  cd ..
+ 1682  emacs site-setup.
+ 1683  cd sim
+ 1684  ls
+ 1685  make
+ 1686  history | grep export
+ 1687  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin
+ 1688  make
+ 1689  cd ..
+ 1690  cd addins/riscv-arch-test/
+ 1691  git branch
+ 1692  git checkout main
+ 1693  git pull
+ 1694  cd ..
+ 1695  cd sim
+ 1696  make
+ 1697  echo $WALLY
+ 1698  cd ..
+ 1699  source setup.sh
+ 1700  emacs setup.sh
+ 1701  source setup.sh
+ 1702  echo $WALLY
+ 1703  cd sim
+ 1704  make
+ 1705  source ~/okstate.sh 
+ 1706  regression-wally 
+ 1707  w
+ 1708  df -h
+ 1709  ls -la
+ 1710  ls ../bin/
+ 1711  cd ../bin
+ 1712  ls
+ 1713  more docker.sh 
+ 1714  which docker
+ 1715  ls
+ 1716  chmod 755 docker.sh 
+ 1717  ./docker.sh 
+ 1718  ls -la
+ 1719  more wsim
+ 1720  ls
+ 1721  cd ..
+ 1722  ls
+ 1723  ls -la
+ 1724  cd addins/
+ 1725  ls
+ 1726  cd SoftFloat-3e/build/Linux-x86_64-GCC/
+ 1727  make
+ 1728  cd ..
+ 1729  cd ../TestFloat-3e/build/Linux-x86_64-GCC/
+ 1730  make
+ 1731  cd ..
+ 1732  cd tests
+ 1733  cd fp
+ 1734  ls
+ 1735  ./create_all_vectors.sh 
+ 1736  ls -la
+ 1737  ls vectors/
+ 1738  ls
+ 1739  cd ..
+ 1740  ls
+ 1741  cd ..
+ 1742  ls
+ 1743  cd sim
+ 1744  more ../testbench/testbench_fp.sv 
+ 1745  ls
+ 1746  ls -la
+ 1747  which wsim
+ 1748  wsim
+ 1749  more ../bin/wsim 
+ 1750  wsim fdqh_ieee_rv64gc add -t testbench_fp
+ 1751  cd ../src
+ 1752  ls
+ 1753  cd ieu/bmu/
+ 1754  ls
+ 1755  ls ~/cvw2/src/ieu/bmu/bitmanipalu.sv 
+ 1756  more ~/cvw2/src/ieu/bmu/bitmanipalu.sv 
+ 1757  more bitmanipalu.sv 
+ 1758  tail -25 bitmanipalu.sv 
+ 1759  tail -15 bitmanipalu.sv 
+ 1760  tail -15 ~/cvw2/src/ieu/bmu/bitmanipalu.sv 
+ 1761  history
+ 1762  cd cvw/src/ieu/bmu/
+ 1763  more bitmanipalu.sv 
+ 1764  tail -15 ~/cvw2/src/ieu/bmu/bitmanipalu.sv 
+ 1765  tail ~/cvw2/src/ieu/bmu/bitmanipalu.sv 
+ 1766  clear
+ 1767  tail ~/cvw2/src/ieu/bmu/bitmanipalu.sv 
+ 1768  tail -1000 ~/cvw2/src/ieu/bmu/bitmanipalu.sv 
+ 1769  tail -1000 bitmanipalu.sv 
+ 1770  git clone git@github.com:arith2024/batchMul.git
+ 1771  ls -latr
+ 1772  cd batchMul/
+ 1773  ls
+ 1774  cd Montgomery/
+ 1775  ls
+ 1776  cd KaratsubaV2/
+ 1777  ls
+ 1778  cd MontgomeryKarat/
+ 1779  ls
+ 1780  cd 2x1038/
+ 1781  ls
+ 1782  make
+ 1783  sudo apt-get install openssl 
+ 1784  sudo apt-get install libssl-dev
+ 1785  make
+ 1786  ls -la
+ 1787  ./main
+ 1788  ls
+ 1789  more Makefile 
+ 1790  ls
+ 1791  cd ..
+ 1792  ls
+ 1793  cd 2x2078/
+ 1794  ls
+ 1795  make
+ 1796  ./main
+ 1797  cal -3
+ 1798  sudo apt install ncal
+ 1799  cal -3
+ 1800  ls
+ 1801  ls *py
+ 1802  ./update.sh 
+ 1803  cd cvw
+ 1804  ls
+ 1805  git pull
+ 1806  cd ..
+ 1807  mv cvw cvw5
+ 1808  history | grep clone
+ 1809  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1810  cd cvw
+ 1811  ls
+ 1812  emacs setup.sh
+ 1813  source setup.sh
+ 1814  echo $WALLY
+ 1815  ls
+ 1816  echo $RISCV
+ 1817  ls
+ 1818  cd sim
+ 1819  ls
+ 1820  make
+ 1821  history | grep export
+ 1822  echo $PATH
+ 1823  cd ..
+ 1824  emacs ~/fix.txt
+ 1825  emacs setup.sh 
+ 1826  cd cvw
+ 1827  sudo reboot
+ 1828  cd cvw
+ 1829  source setup.sh
+ 1830  cd sim
+ 1831  ls
+ 1832  echo $PATH
+ 1833  make
+ 1834  more ~/fix.txt 
+ 1835  echo $PATH
+ 1836  clear
+ 1837  echo $PATH
+ 1838  more ~/fix.txt 
+ 1839  cd
+ 1840  emacs fix.txt 
+ 1841  chmod 700 fix.sh
+ 1842  ./fix.sh 
+ 1843  echo $PATH
+ 1844  cd sim
+ 1845  ls
+ 1846  cd cvw/sim
+ 1847  make
+ 1848  history | grep export
+ 1849  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin
+ 1850  make
+ 1851  echo $PATH
+ 1852  cd cvw
+ 1853  source setup.sh
+ 1854  cd sim
+ 1855  make
+ 1856  echo $PATH
+ 1857  export PATH=/opt/riscv/riscv-gnu-toolchain/bin:/opt/riscv/riscv-gnu-toolchain/riscv64-unknown-elf/bin:/opt/riscv/bin:/usr/local/bin/verilator:/home/jstine/cvw/bin:/cad/mentor/questa_sim-2023.4/questasim/bin:/cad/synopsys/SYN/bin:/home/jstine/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 1858  make
+ 1859  ls
+ 1860  emacs ~/fix.sh
+ 1861  cd cvw/
+ 1862  source setup.sh
+ 1863  cd sim
+ 1864  make
+ 1865  source ~/fix.sh
+ 1866  make
+ 1867  cd cvw
+ 1868  source setup.sh
+ 1869  cd sim
+ 1870  make
+ 1871  more ~/fix.sh
+ 1872  echo $PATH
+ 1873  cd ..
+ 1874  emacs setup.sh
+ 1875  source setup.sh
+ 1876  echo $PATH
+ 1877  exit
+ 1878  cd cvw
+ 1879  source setup.sh
+ 1880  echo $PATH
+ 1881  cd sim
+ 1882  make
+ 1883  source ~/okstate.sh 
+ 1884  regression-wally 
+ 1885  cd ../addins/SoftFloat-3e/build/Linux-x86_64-GCC/
+ 1886  make
+ 1887  cd ..
+ 1888  cd ../TestFloat-3e/build/Linux-x86_64-GCC/
+ 1889  make
+ 1890  cd ..
+ 1891  ls
+ 1892  cd ../tests/
+ 1893  cd ../../tests/fp/
+ 1894  ls
+ 1895  ./create_all_vectors.sh 
+ 1896  ls
+ 1897  cd ..
+ 1898  cd ./sim
+ 1899  ls
+ 1900  cd ../sim
+ 1901  ls
+ 1902  ls -la
+ 1903  more ../bin/regression-wally 
+ 1904  ls
+ 1905  more ../bin/regression-wally 
+ 1906  more ../bin/wsim 
+ 1907  wsim fdqh_ieee_rv64gc add -t testbench_fp
+ 1908  ls
+ 1909  ls -la
+ 1910  cd ..
+ 1911  ls -la
+ 1912  ls
+ 1913  cal -3
+ 1914  emacs site-setup.sh
+ 1915  cd cvw
+ 1916  ls
+ 1917  source setup.sh
+ 1918  ls
+ 1919  ls -la /opt
+ 1920  ls -la /opt/riscv/
+ 1921  ls
+ 1922  cd Lin
+ 1923  cd linux/
+ 1924  ls
+ 1925  make
+ 1926  ls -la /opt/riscv
+ 1927  cd
+ 1928  cd cvw/sim
+ 1929  ls
+ 1930  regression-wally 
+ 1931  source ~/okstate.sh 
+ 1932  regression-wally 
+ 1933  cd cvw
+ 1934  source setup.sh
+ 1935  echo $PATH
+ 1936  cd sim
+ 1937  make
+ 1938  ls -la
+ 1939  regression-wally 
+ 1940  source ~/okstate.sh 
+ 1941  regression-wally 
+ 1942  ls
+ 1943  cd
+ 1944  ls
+ 1945  mv cvw cvw6
+ 1946  history | grep clone
+ 1947  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1948  cd cvw
+ 1949  source setup.sh
+ 1950  cd sim
+ 1951  make
+ 1952  which riscv64-unknown-elf-gcc
+ 1953  cd cvw
+ 1954  cd bin
+ 1955  cat wally-tool-chain-install.sh 
+ 1956  cd ..
+ 1957  source setup.sh
+ 1958  which verilator
+ 1959  ssh root@sandor.ecen.okstate.edu
+ 1960  ls
+ 1961  ls /home
+ 1962  sudo passwd rose
+ 1963  w
+ 1964  who
+ 1965  ls -la
+ 1966  ls
+ 1967  su
+ 1968  cd /opt/riscv
+ 1969  ls -la
+ 1970  sudo chown -Rf root buildroot/
+ 1971  sudo chown -Rf root sail-riscv/
+ 1972  sudo chown root .
+ 1973  ls -la
+ 1974  sudo chgrp -rf root buildroot/
+ 1975  sudo chgrp -Rf root buildroot/
+ 1976  sudo chgrp -Rf root sail-riscv/
+ 1977  ls -la
+ 1978  cd /bench
+ 1979  ls
+ 1980  cd subhash/
+ 1981  ls -la
+ 1982  cd cpu2017/
+ 1983  ls
+ 1984  ls -la
+ 1985  ls -latr benchspec/
+ 1986  ls -latr benchspec/CPU/
+ 1987  ls -latr benchspec/CPU/505.mcf_r/
+ 1988  ls -latr benchspec/CPU/505.mcf_r/exe/
+ 1989  strings benchspec/CPU/505.mcf_r/exe/
+ 1990  strings benchspec/CPU/505.mcf_r/exe/mcf_r_base.mytest 
+ 1991  ls -latr benchspec/CPU/505.mcf_r/src/
+ 1992  strings benchspec/CPU/505.mcf_r/exe/mcf_r_base.mytest 
+ 1993  ls -latr benchspec/CPU/
+ 1994  ls -latr benchspec/CPU/5* | more
+ 1995  ls -ldtr benchspec/CPU/5* | more
+ 1996  ls -ldtr benchspec/CPU/5* | wc
+ 1997  ls -ldtr benchspec/CPU/
+ 1998  ls -latr benchspec/CPU/
+ 1999  ls -ldtr benchspec/CPU/5* | wc
+ 2000  ls -ldtr benchspec/CPU/6* | wc
+ 2001  ls
+ 2002  ./update.sh 
+ 2003  ls -la
+ 2004  ls
+ 2005  cd riscv-crypto/
+ 2006  ls -la
+ 2007  source bin/conf.sh 
+ 2008  ls
+ 2009  cd benchmarks/
+ 2010  ls -la
+ 2011  more README.md 
+ 2012  source ~/okstate.sh 
+ 2013  make CONFIG=rv64-baseline run
+ 2014  ls
+ 2015  ls -la
+ 2016  history > ~/history-k.txt

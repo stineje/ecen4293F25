@@ -1,0 +1,998 @@
+ 1001  cd build/
+ 1002  cmake ..
+ 1003  ls
+ 1004  emacs
+ 1005  ls
+ 1006  ls -latr
+ 1007  cd trek5
+ 1008  ls
+ 1009  gzip trek5-2.1.10b-GCC6_el7.tar 
+ 1010  ls -la
+ 1011  cd trek5-2.1.10b-GCC6_el7/
+ 1012  ls
+ 1013  cp -r examples/tutorials/ ~/breker/tutorials
+ 1014  mkdir ~/brker
+ 1015  rm -rf ~/brker/
+ 1016  mkdir ~/breker
+ 1017  cp -r examples/tutorials/ ~/breker/tutorials
+ 1018  ls
+ 1019  source bin/setup.bash 
+ 1020  export BREKER_LICENSE_FILE=1819@trelaina.ecen.okstate.edu
+ 1021  cd
+ 1022  cd brker
+ 1023  cd breker/
+ 1024  ls
+ 1025  cd tutorials/
+ 1026  ls
+ 1027  mkdir build
+ 1028  cd build/
+ 1029  setenv WORKDIR /home/jstine/breker/tutorials/build/
+ 1030  export WORKDIR=/home/jstine/breker/tutorials/build/
+ 1031  cmake ..
+ 1032  sudo apt-get install libstdc++6
+ 1033  sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+ 1034  cd
+ 1035  ./update.sh 
+ 1036  cd breker/tutorials/build/
+ 1037  ls
+ 1038  cmake ..
+ 1039  sudo apt-get install libstdc++6-4.7-dev
+ 1040  sudo apt-get install libstdc++6-7-dbg
+ 1041  cd
+ 1042  ls -latr
+ 1043  tar -xzvf cmake-3.15.3.tgz 
+ 1044  cd cmake-3.15.3/
+ 1045  ls
+ 1046  ls -la
+ 1047  gcc --version
+ 1048  cd 
+ 1049  mv cmake-3.15.3 breker/
+ 1050  mv cmake-3.15.3.tgz  breker/
+ 1051  mv gcc-4.9.3.tgz breker/
+ 1052  ls
+ 1053  cd breker
+ 1054  ls
+ 1055  tar -xzvf gcc-4.9.3.tgz 
+ 1056  ls
+ 1057  emacs breker.csh
+ 1058  ls
+ 1059  ls -la
+ 1060  emacs breker.bash
+ 1061  source breker.bash
+ 1062  ls -la
+ 1063  cd tutorials/
+ 1064  ls
+ 1065  cd b u
+ 1066  cd build/
+ 1067  cmake ..
+ 1068  which cmake 
+ 1069  cd ..
+ 1070  ssh jstine@iq9.atrc.okstate.edu
+ 1071  emacs breker.bash &
+ 1072  source breker.bash
+ 1073  ls -la
+ 1074  which cmake
+ 1075  ls cmake-3.15.3
+ 1076  source breker.bash
+ 1077  which gcc
+ 1078  cd tutorials/build/
+ 1079  cmake ..
+ 1080  cd trek5
+ 1081  ls
+ 1082  cd trek5-2.1.10b-GCC6_el7/
+ 1083  ls
+ 1084  source bin/setup.bash
+ 1085  cd
+ 1086  cd breker
+ 1087  source breker.bash
+ 1088  cd tutorials/build/
+ 1089  cmake ..
+ 1090  cd ..
+ 1091  emacs breker.bash &
+ 1092  echo $LD_LIBRARY_PATH 
+ 1093  source breker.bash
+ 1094  cd tutorials/makw
+ 1095  cd tutorials/make
+ 1096  cd tutorials/build/
+ 1097  cmake ..
+ 1098  cd ..
+ 1099  chmod -Rf 755 cmake-3.15.3
+ 1100  chmod -Rf 755 gcc-4.9.3
+ 1101  cd tutorials/build/
+ 1102  cmake ..
+ 1103  cd
+ 1104  chmod -Rf 755 breker/
+ 1105  cd breker/tutorials/build/
+ 1106  cmake ..
+ 1107  ls -la $CC
+ 1108  ls -la $CC/bin
+ 1109  which gcc
+ 1110  ls -la
+ 1111  cd ..
+ 1112  source breker.bash
+ 1113  cd tutorials/build/
+ 1114  cmake ..
+ 1115  cd trek5/trek5-2.1.10b-GCC6_el7/
+ 1116  source bin/setup.bash 
+ 1117  cd
+ 1118  cd breker/
+ 1119  source breker.bash
+ 1120  cd tutorials/build/
+ 1121  cmake ..
+ 1122  cd ..
+ 1123  emacs breker.bash
+ 1124  emacs breker.bash &
+ 1125  source breker.bash
+ 1126  echo $CC
+ 1127  cd tutorials/build/
+ 1128  cmake ..
+ 1129  cd trek5
+ 1130  cd trek5-2.1.10b-GCC6_el7/
+ 1131  source bin/setup.bash 
+ 1132  cd
+ 1133  cd breker/
+ 1134  source breker.bash
+ 1135  cd tutorials/build/
+ 1136  cmake ..
+ 1137  echo $LD_LIBRARY_PATH 
+ 1138  cd ..
+ 1139  emacs &
+ 1140  cd trek5/trek5-2.1.10b-GCC6_el7/
+ 1141  source bin/setup.bash 
+ 1142  cd
+ 1143  cd breker/
+ 1144  emacs breker.bash &
+ 1145  source breker.bash
+ 1146  cd tutorials/build/
+ 1147  cmake ..
+ 1148  ls ../../cmake-3.15.3
+ 1149  ls ../../gcc-4.9.3
+ 1150  cd ..
+ 1151  source breker.bash
+ 1152  cd trek5
+ 1153  cd trek5-2.1.10b-GCC6_el7/
+ 1154  source bin/setup.bash
+ 1155  cd
+ 1156  cd breker
+ 1157  source breker.bash
+ 1158  cd tutorials/build/
+ 1159  ls
+ 1160  cmake ..
+ 1161  emacs &
+ 1162  sudo apt-get install libstdc++6 
+ 1163  echo $LD_LIBRARY_PATH 
+ 1164  export LD_LIBRARY_PATH /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib64
+ 1165  export LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib64
+ 1166  cmake ..
+ 1167  export LD_LIBRARY_PATH=$CC/lib64
+ 1168  echo $LD_LIBRARY_PATH 
+ 1169  export LD_LIBRARY_PATH=/home/jstine/breker/gcc-4.9.3/lib64
+ 1170  echo $LD_LIBRARY_PATH 
+ 1171  cmake ..
+ 1172  export LD_LIBRARY_PATH=/home/jstine/breker/gcc-4.9.3/lib64:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib64
+ 1173  cmake ..
+ 1174  ls
+ 1175  ./update.sh 
+ 1176  cd breker/
+ 1177  ls
+ 1178  emacs breker.bash
+ 1179  ls
+ 1180  source breker.bash
+ 1181  cd tutorials/build/
+ 1182  ls
+ 1183  cd ..
+ 1184  rm -rf build/
+ 1185  mkdir build
+ 1186  cd build
+ 1187  cmake ..
+ 1188  setenv BREKER_HOME = /home/jstine/breker/tutorials/build/
+ 1189  export BREKER_HOME=/home/jstine/breker/tutorials/build/
+ 1190  cmake ..
+ 1191  find . -name tut_debug.cmake
+ 1192  cd ..
+ 1193  find . -name tut_debug.cmake
+ 1194  cd ..
+ 1195  find . -name tut_debug.cmake
+ 1196  cd tutorials/
+ 1197  ls
+ 1198  cd build/
+ 1199  ls
+ 1200  ls -la
+ 1201  cd ..
+ 1202  ls -la
+ 1203  tar -xzvf gcc-6.4.0.tgz 
+ 1204  ls -la
+ 1205  rm gcc-6.4.0.tgz 
+ 1206  ls -la
+ 1207  cd tutorials/build/
+ 1208  ls
+ 1209  cmake ..
+ 1210  vf ..
+ 1211  cd breker
+ 1212  ls -la
+ 1213  rm -rf cmake-3.15.3
+ 1214  tar -xzvf cmake-3.15.3-2.tgz 
+ 1215  ls -la
+ 1216  source breker.bash
+ 1217  cd tutorials/build/
+ 1218  ls
+ 1219  cmake ..
+ 1220  cd ..
+ 1221  ls
+ 1222  rm -rf cmake-3.15.3
+ 1223  tar -xzvf cmake-3.15.3.tgz 
+ 1224  ls -la
+ 1225  emacs breker.bash
+ 1226  source breker.bash
+ 1227  cd tutorials/build/
+ 1228  cd ..
+ 1229  rm -rf build
+ 1230  mkdir build
+ 1231  cd build/
+ 1232  cmake ..
+ 1233  export BREKER_HOME=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7
+ 1234  cmake ..
+ 1235  cd
+ 1236  cd trek5
+ 1237  cd trek5-2.1.10b-GCC6_el7/
+ 1238  source bin/setup.bash 
+ 1239  cd
+ 1240  cd breker/tutorials/build/
+ 1241  cmake ..
+ 1242  ls -la
+ 1243  make svip-riscv64-hello-debug
+ 1244  cd ..
+ 1245  rm -rf build/
+ 1246  mkdir build
+ 1247  cd build/
+ 1248  cmake ..
+ 1249  cmake -DSIMULATOR=SYNOPSYS -DVCS=vcs ..
+ 1250  setenv WORKDIR /home/jstine/breker/tutorials/build/
+ 1251  export WORKDIR=/home/jstine/breker/tutorials/build/
+ 1252  make svip-riscv64-hello-debug
+ 1253  sudo dnf install glibc-headers
+ 1254  sudo apt-get install dnf
+ 1255  sudo dnf install glibc-headers
+ 1256  sudo apt-get install glibc-headers
+ 1257  sudo apt-get install build-essential flex libelf-dev libc6-dev-amd64 binutils-dev libdwarf-dev
+ 1258  make svip-riscv64-hello-debug
+ 1259  sudo apt install gcc-multilib
+ 1260  make svip-riscv64-hello-debug
+ 1261  cd ..
+ 1262  rm -rf build
+ 1263  cd ..
+ 1264  rm -rf tutorials/
+ 1265  cp -r ~/trek5/trek5-2.1.10b-GCC6_el7/examples/tutorials/ .
+ 1266  cd tutorials/
+ 1267  mkdir build
+ 1268  cd build
+ 1269  cmake ..
+ 1270  make svip-riscv64-hello-debug
+ 1271  cd trek5/trek5-2.1.10b-GCC6_el7/
+ 1272  source bin/setup.bash 
+ 1273  cd
+ 1274  cd breker/
+ 1275  source breker.bash
+ 1276  cd tutorials/build/
+ 1277  cmake ..
+ 1278  make svip-riscv64-hello-debug
+ 1279  cmake -DSIMULATOR=SYNOPSYS -DVCS=vcs ..
+ 1280  make svip-riscv64-hello-debug
+ 1281  echo $PATH
+ 1282  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1283  cd ..
+ 1284  ls -la
+ 1285  emacs breker.bash
+ 1286  fg
+ 1287  source breker.bash
+ 1288  cd trek5/trek5-2.1.10b-GCC6_el7/
+ 1289  source bin/setup.bash
+ 1290  cd 
+ 1291  cd breker/
+ 1292  source breker.bash
+ 1293  cd tutorials/
+ 1294  rm -rrf build/
+ 1295  mkdir build
+ 1296  cd build
+ 1297  cmake ..
+ 1298  ls -la ../../
+ 1299  ls -la ../../../trek5
+ 1300  fg
+ 1301  cd ..
+ 1302  emacs breker.bash
+ 1303  source breker.bash
+ 1304  cd 
+ 1305  cd breker/tutorials/
+ 1306  cd build/
+ 1307  cmake ..
+ 1308  cmake -DSIMULATOR=SYNOPSYS -DVCS=vcs ..
+ 1309  make svip-riscv64-hello-debug 
+ 1310  cd ..
+ 1311  ls -la
+ 1312  tar -xzvf gcc-8.3.0.xz
+ 1313  unxz gcc-8.3.0.xz
+ 1314  ls -la
+ 1315  ls -la gcc-8.3.0 
+ 1316  mv gcc-8.3.0 gcc-8.3.0.tar
+ 1317  ls -la
+ 1318  tar -xvf gcc-8.3.0.tar
+ 1319  ls -la
+ 1320  emacs breker.bash
+ 1321  source breker.bash
+ 1322  cd bui
+ 1323  cd tutorials/
+ 1324  rm -rf build/
+ 1325  mkdir build
+ 1326  cd build/
+ 1327  cmake ..
+ 1328  make svip-riscv64-hello-debug 
+ 1329  cd ..
+ 1330  fg
+ 1331  emacs breker.bash
+ 1332  cd trek5
+ 1333  ls
+ 1334  cd trek5-2.1.10b-GCC6_el7/
+ 1335  source bin/setup.bash
+ 1336  cd
+ 1337  cd breker
+ 1338  source breker.bash
+ 1339  cd tutorials/build/
+ 1340  cd ..
+ 1341  rm -rf build
+ 1342  mkdir build
+ 1343  cd build/
+ 1344  cmake ..
+ 1345  sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+ 1346  sudo apt-get update
+ 1347  sudo apt-get install gcc-4.9
+ 1348  sudo apt-get upgrade libstdc++6
+ 1349  ls -l /usr/lib/x86_64-linux-gnu/libstdc++*
+ 1350  cmake ..
+ 1351  ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32 /home/jstine/breker/gcc-4.9.3/lib64/libstdc++.so.6
+ 1352  rm /home/jstine/breker/gcc-4.9.3/lib64/libstdc++.so.6
+ 1353  ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32 /home/jstine/breker/gcc-4.9.3/lib64/libstdc++.so.6
+ 1354  cmake ..
+ 1355  make svip-riscv64-hello-debug 
+ 1356  cd ..
+ 1357  emacs breker.bash
+ 1358  cp breker.bash breker.old
+ 1359  emacs breker.bash
+ 1360  ls
+ 1361  fg
+ 1362  source breker.bash
+ 1363  cd tutorials/
+ 1364  ls
+ 1365  rm -rf build/
+ 1366  mkdir build
+ 1367  ls
+ 1368  cd build/
+ 1369  ls
+ 1370  cmake ..
+ 1371  make svip-riscv64-hello-debug 
+ 1372  ls -la
+ 1373  cd ..
+ 1374  ls -la
+ 1375  rm -rf gcc-4.9.3
+ 1376  ls -la
+ 1377  rm -rf gcc-8.3.0
+ 1378  rm -rf gcc-8.3.0.tar 
+ 1379  ls -la
+ 1380  echo $SHELL
+ 1381  more /etc/os-release 
+ 1382  ls -la
+ 1383  cd tutorials/
+ 1384  cd build/
+ 1385  ls -la
+ 1386  cd ..
+ 1387  rm -rf build
+ 1388  mkdir build
+ 1389  cd build/
+ 1390  cmake ..
+ 1391  make svip-riscv64-hello-debug
+ 1392  echo $PATH
+ 1393  export PATH=$PATH:.
+ 1394  make svip-riscv64-hello-debug
+ 1395  df
+ 1396  fg
+ 1397  setenv WORKDIR /home/jstine/breker/tutorials/build/
+ 1398  export WORKDIR=/home/jstine/breker/tutorials/build
+ 1399  cmake ..
+ 1400  make svip-riscv64-hello-debug
+ 1401  make clean
+ 1402  make svip-riscv64-hello-debug
+ 1403  /home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1404  sudo apt-get remove --purge python3*
+ 1405  sudo apt autoremove
+ 1406  sudo apt-get install python3
+ 1407  /home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1408  fg
+ 1409  cd trek5/trek5-2.1.10b-GCC6_el7/
+ 1410  source bin/setup.bash 
+ 1411  cd
+ 1412  cd breker/
+ 1413  source breker.bash
+ 1414  cd tutorials/
+ 1415  ls
+ 1416  rm -rf build
+ 1417  mkdir build
+ 1418  cd build/
+ 1419  cmake ..
+ 1420  make svip-riscv64-hello-debug
+ 1421  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1422  LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1423  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1424  cd
+ 1425  chmod -Rf 755 trek5
+ 1426  cd breker/tutorials/build/
+ 1427  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1428  cd
+ 1429  cd trek5
+ 1430  cd trek5-2.1.10b-GCC6_el7/
+ 1431  source bin/setup.bash 
+ 1432  cd
+ 1433  cd breker/
+ 1434  source breker.bash
+ 1435  cd tutorials/build/
+ 1436  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1437  cd ..
+ 1438  rm -rf build
+ 1439  mkdir build
+ 1440  ls -la
+ 1441  ls
+ 1442  cd build
+ 1443  ls
+ 1444  cmake ..
+ 1445  make svip-riscv64-hello-debug
+ 1446  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1447  cd ..
+ 1448  emacs breker.bash
+ 1449  cd trek5/trek5-2.1.10b-GCC6_el7/
+ 1450  source bin/setup.bash 
+ 1451  cd
+ 1452  cd breker/
+ 1453  source breker.bash
+ 1454  cd tutorials/
+ 1455  ls
+ 1456  rm -rf build
+ 1457  mkdir build
+ 1458  cd build/
+ 1459  cmake ..
+ 1460  make svip-riscv64-hello-debug
+ 1461  echo $LD_LIBRARY_PATH 
+ 1462  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:/home/jstine/breker/gcc-6.4.0/lib:.:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib64;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1463  more /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml
+ 1464  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/breker/gcc-6.4.0/lib64:/home/jstine/breker/gcc-6.4.0/lib:.:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib64;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1465  ssh jstine@iq9.es-private.okstate.edu
+ 1466  cd trek5/trek5-2.1.10b-GCC6_el7/
+ 1467  ls
+ 1468  source bin/setup.bash 
+ 1469  cd
+ 1470  cd breker/
+ 1471  emacs breker.bash
+ 1472  ls ~/trek5
+ 1473  fg
+ 1474  source breker.bash
+ 1475  cd
+ 1476  find . -name CMakeLists.txt
+ 1477  fg
+ 1478  pwd
+ 1479  cd breker/
+ 1480  ls
+ 1481  cd tutorials/
+ 1482  ls
+ 1483  rm -rf build/
+ 1484  mkdir build
+ 1485  cd build/
+ 1486  cmake ..
+ 1487  cd ..
+ 1488  fg
+ 1489  cd breker
+ 1490  ls
+ 1491  source breker.bash
+ 1492  ls
+ 1493  rm -i *~
+ 1494  ls -la
+ 1495  more breker.bash
+ 1496  fg
+ 1497  emacs breker.
+ 1498  ls /usr/lib/x86_64-linux-gnu/
+ 1499  fg
+ 1500  cd tutorials/
+ 1501  ls
+ 1502  rm -rf build/
+ 1503  mkdir build
+ 1504  cd build/
+ 1505  cmake ..
+ 1506  history | grep make
+ 1507  make svip-riscv64-hello-debug
+ 1508  ls
+ 1509  set
+ 1510  setenv
+ 1511  set
+ 1512  set | more
+ 1513  ls
+ 1514  ls -la
+ 1515  make svip-riscv64-hello-debugls
+ 1516  ls
+ 1517  ls -la
+ 1518  ls
+ 1519  ls -la
+ 1520  cd ..
+ 1521  ls
+ 1522  cd ..
+ 1523  ls
+ 1524  ls tutorials/build/
+ 1525  ls
+ 1526  more breker.bash
+ 1527  fg
+ 1528  emacs breker.bash
+ 1529  ls
+ 1530  fg
+ 1531  source breker.bash 
+ 1532  ls
+ 1533  ls -la
+ 1534  cd tutorials/
+ 1535  ls
+ 1536  ls -la
+ 1537  cp ../breker.bash .
+ 1538  source breker.bash 
+ 1539  emacs breker.bash 
+ 1540  mv ../gcc-6.4.0/ .
+ 1541  mv ../cmake-3.15.3 .
+ 1542  ls -la
+ 1543  ls ..
+ 1544  fg
+ 1545  source breker.bash 
+ 1546  ls cmake-3.15.3/bin/
+ 1547  fg
+ 1548  source breker.bash 
+ 1549  fg
+ 1550  ls
+ 1551  fg
+ 1552  source breker.bash 
+ 1553  fg
+ 1554  pwd
+ 1555  fg
+ 1556  source breker.bash 
+ 1557  fg
+ 1558  source breker.bash 
+ 1559  fg
+ 1560  source breker.bash 
+ 1561  fg
+ 1562  ls 
+ 1563  cd ..
+ 1564  ls -la
+ 1565  cd tutorials/
+ 1566  ls -la
+ 1567  fg
+ 1568  source breker.bash 
+ 1569  fg
+ 1570  source breker.bash 
+ 1571  fg
+ 1572  more breker.bash 
+ 1573  fg
+ 1574  source breker.bash
+ 1575  fg
+ 1576  source breker.bash
+ 1577  fg
+ 1578  ls
+ 1579  fg
+ 1580  which cmake
+ 1581  fg
+ 1582  source breker.bash
+ 1583  which cmake
+ 1584  rm -rf build
+ 1585  mkdir build
+ 1586  cd build
+ 1587  ls
+ 1588  cmake ..
+ 1589  history | grep make
+ 1590  make svip-riscv64-hello-debug
+ 1591  fg
+ 1592  cd breker/
+ 1593  cd tutorials/
+ 1594  source breker.bash
+ 1595  ls
+ 1596  rm -rf build
+ 1597  mkdir build
+ 1598  cd build/
+ 1599  cmake ..
+ 1600  ls
+ 1601  make svip-riscv64-hello-debug
+ 1602  ls -la
+ 1603  cd breker
+ 1604  ls
+ 1605  ls -la
+ 1606  cd tutorials/
+ 1607  ls -la
+ 1608  emacs breker.bash
+ 1609  history | grep export
+ 1610  fg
+ 1611  source breker.bash
+ 1612  ls -la
+ 1613  cd build/
+ 1614  cd ..
+ 1615  rm -rf build/
+ 1616  mkdir build
+ 1617  cd build
+ 1618  cmake ..
+ 1619  history | grep make
+ 1620  make svip-riscv64-hello-debug
+ 1621  more Makefile 
+ 1622  make svip-riscv64-hello-debug
+ 1623  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1624  ls
+ 1625  fg
+ 1626  ssh jstine@yukari.ecen.okstate.edu
+ 1627  fg
+ 1628  cd ..
+ 1629  source breker.bash
+ 1630  cd tuto
+ 1631  ls
+ 1632  cd build/
+ 1633  cmake ..
+ 1634  make svip-riscv64-hello-debug
+ 1635  ls ~/trek5/
+ 1636  ls ~/trek5/trek5-2.1.10b-GCC6_el7/linux64/
+ 1637  ls ~/trek5/trek5-2.1.10b-GCC6_el7/linux64/bin/
+ 1638  ~/trek5/trek5-2.1.10b-GCC6_el7/linux64/bin/treksvip1 
+ 1639  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1640  ~/trek5/trek5-2.1.10b-GCC6_el7/linux64/bin/treksvip1 -p
+ 1641  ~/trek5/trek5-2.1.10b-GCC6_el7/linux64/bin/treksvip1 
+ 1642  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1643  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml;-p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s 0x1234;-o svip-riscv64-hello;-e pss_top.entry
+ 1644  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s 0x1234;-o svip-riscv64-hello;-e pss_top.entry
+ 1645  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234;-o svip-riscv64-hello;-e pss_top.entry
+ 1646  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234;-o svip-riscv64-hello -e pss_top.entry
+ 1647  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234 -o svip-riscv64-hello -e pss_top.entry
+ 1648  cd breker
+ 1649  ls
+ 1650  cd tutorials/
+ 1651  ls
+ 1652  cd build/
+ 1653  ls
+ 1654  cd ..
+ 1655  rm -rf build/
+ 1656  mkdir build
+ 1657  source breker.bash
+ 1658  cd build/
+ 1659  ls
+ 1660  cmake ..
+ 1661  ls -la
+ 1662  history | grep make
+ 1663  make svip-riscv64-hello-debug
+ 1664  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234;-o svip-riscv64-hello -e pss_top.entry
+ 1665  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234 -o svip-riscv64-hello -e pss_top.entry
+ 1666  ls -la
+ 1667  more Makefile 
+ 1668  emacs Makefile 
+ 1669  make svip-riscv64-hello-debug
+ 1670  fg
+ 1671  emacs Makefile
+ 1672  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234 -o svip-riscv64-hello -e pss_top.entry
+ 1673  fg
+ 1674  emacs Makefile
+ 1675  make svip-riscv64-hello-debug
+ 1676  fg
+ 1677  emacs Makefile
+ 1678  fg
+ 1679  make svip-riscv64-hello-debug
+ 1680  fg
+ 1681  ssh jstine@yukari.ecen.okstate.edu
+ 1682  /bin/env;LD_LIBRARY_PATH=/import/yukari1/trek5-2.1.10b-GCC6_el7/linux64/lib:.:/import/yukari1/trek5-2.1.10b-GCC6_el7/linux64/lib:/import/yukari1/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib:/import/yukari1/trek5-2.1.10b-GCC6_el7/opensrc/gcc/lib64:/usr/local/miniconda3/lib:/usr/lib:/lib:/usr/local/lib;/home/jstine/breker/tutorials/build/bin/treksvip.exe;-p;/import/yukari1/trek5-2.1.10b-GCC6_el7//examples/designs/qemu/riscv64/platform.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml;-p;/home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml;-s;0x1234;-o;svip-riscv64-hello;-e;pss_top.entry
+ 1683  /bin/env LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234 -o svip-riscv64-hello -e pss_top.entry
+ 1684  /bin/env;LD_LIBRARY_PATH=/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:/home/jstine/trek5/trek5-2.1.10b-GCC6_el7/linux64/lib:;/home/jstine/breker/tutorials/build/bin/treksvip.exe -p /home/jstine/trek5/trek5-2.1.10b-GCC6_el7/examples/designs/qemu/riscv64/platform.yaml -p /home/jstine/breker/tutorials/svip/treksvip/yaml/treksvip.yaml -p /home/jstine/breker/tutorials/svip/treksvip/tests/test_hello.yaml -s 0x1234 -o svip-riscv64-hello -e pss_top.entry
+ 1685  fg
+ 1686  make -n svip-riscv64-hello-debug
+ 1687  make svip-riscv64-hello-debug
+ 1688  more /etc/os-release 
+ 1689  cd breker/
+ 1690  ls
+ 1691  cd tuo
+ 1692  cd tutorials/
+ 1693  ls
+ 1694  source breker.bash
+ 1695  history
+ 1696  cmake ..
+ 1697  ls
+ 1698  cd build/
+ 1699  cmake ..
+ 1700  make svip-riscv64-hello-debug
+ 1701  cd ..
+ 1702  ls
+ 1703  cd build/
+ 1704  cmake ..
+ 1705  make svip-riscv64-hello-debug
+ 1706  make -d VERBOSE=1 svip-riscv64-hello-debug
+ 1707  ls -latr
+ 1708  cd svip
+ 1709  ls
+ 1710  cat Makefile | grep LD
+ 1711  more Makefile 
+ 1712  make help |
+ 1713  make help | grep svip
+ 1714  make help | grep svip | grep riscv64_hello
+ 1715  make help | grep svip | grep riscv_hello
+ 1716  make help | grep svip | grep riscv64-hello
+ 1717  ls svip
+ 1718  echo $SHELL
+ 1719  make svip-riscv64-hello-clean
+ 1720  make svip-riscv64-hello-gen
+ 1721  cd ..
+ 1722  ls
+ 1723  more breker.bash
+ 1724  history
+ 1725  make svip-riscv64-hello
+ 1726  setenv
+ 1727  set
+ 1728  export
+ 1729  set
+ 1730  set | more
+ 1731  ssh mrich11@combe.ecen.okstate.edu
+ 1732  \
+ 1733  ssh root@moria.ecen.okstate.edu
+ 1734  ssh jstine@moria.ecen.okstate.edu
+ 1735  ls
+ 1736  cd
+ 1737  cd cvw
+ 1738  ls
+ 1739  source setup.sh 
+ 1740  cd examples/fp/fpcalc/
+ 1741  ls
+ 1742  ./fpcalc 
+ 1743  ./fpcalc 0x87ff / 0xe850 
+ 1744  cd
+ 1745  cd trek5
+ 1746  ls
+ 1747  ls -la
+ 1748  w
+ 1749  ls -la
+ 1750  cd
+ 1751  ls -la
+ 1752  ./update.sh 
+ 1753  ls
+ 1754  ssh jstine@iq9.es-private.okstate.edu
+ 1755  which scons
+ 1756  sudo apt-get install scons
+ 1757  git clone https://github.com/gem5/gem5
+ 1758  cd gem5
+ 1759  ls
+ 1760  scons build/X86/gem5.opt -j 16
+ 1761  sudo apt install build-essential git m4 scons zlib1g zlib1g-dev     libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev     python3-dev libboost-all-dev pkg-config python3-tk
+ 1762  scons build/RISCV/gem5.opt -j 16
+ 1763  ls -la
+ 1764  history | grep sudo 
+ 1765  history | grep sudo
+ 1766  ls /home
+ 1767  history | grep make
+ 1768  fwupdmgr get-upgrades
+ 1769  ./update.sh 
+ 1770  ls
+ 1771  cd cvw
+ 1772  ls
+ 1773  source setup.sh
+ 1774  cd sim/
+ 1775  make --jobs
+ 1776  cd ..
+ 1777  source setup.sh
+ 1778  which riscof
+ 1779  cd sim
+ 1780  make --jobs
+ 1781  cd ..
+ 1782  ls
+ 1783  cd ..
+ 1784  cd cvw
+ 1785  git config --list
+ 1786  cd ..
+ 1787  rm -rf cvw
+ 1788  git clone git@github.com:openhwgroup/cvw.git --recursive
+ 1789  cd cvw
+ 1790  cd sim
+ 1791  make --jobs
+ 1792  sudo reboot
+ 1793  ifconfig
+ 1794  ls
+ 1795  ssh jstine@rivendell.ecen.okstate.edu
+ 1796  ls
+ 1797  systemctl start network
+ 1798  sudo systemctl start network
+ 1799  sudo service network stargt
+ 1800  sudo service network start
+ 1801  sudo service status ne
+ 1802  sudo systemctl status network
+ 1803  ls
+ 1804  shutdown
+ 1805  shutdown now
+ 1806  ifconfig
+ 1807  sudo service networking restart
+ 1808  logout
+ 1809  sudo ./update.sh 
+ 1810  ls
+ 1811  fwupdmgr get-upgrades
+ 1812  ./update.sh 
+ 1813  sudo apt autoremove
+ 1814  sudo reboot
+ 1815  w
+ 1816  fwupdmgr get-upgrades 
+ 1817  ./update.sh 
+ 1818  w
+ 1819  df -h
+ 1820  history
+ 1821  w
+ 1822  ls -la
+ 1823  ls
+ 1824  cd cvw
+ 1825  git pull
+ 1826  ls
+ 1827  cd bin
+ 1828  ls
+ 1829  sudo ./wally-tool-chain-install.sh 
+ 1830  ls
+ 1831  cd ..
+ 1832  cd sim
+ 1833  ls
+ 1834  cd ..
+ 1835  source setup.sh
+ 1836  cd sim
+ 1837  make --jobs
+ 1838  regression-wally 
+ 1839  w
+ 1840  df -h
+ 1841  top
+ 1842  w
+ 1843  ls -la
+ 1844  ./update.sh 
+ 1845  adduser fant
+ 1846  sudo adduser fant
+ 1847  finger fant
+ 1848  sudo deluser fant
+ 1849  sudo adduser nfant
+ 1850  sudo adduser bcollings
+ 1851  sudo adduser sauerbach
+ 1852  sudo adduser japease
+ 1853  sudo usermod -aG sudo japease
+ 1854  ssh jstine@yukari.ecen.okstate.edu
+ 1855  ssh jstine@rivendell.ecen.okstate.edu
+ 1856  sudo adduser thkidd
+ 1857  ls
+ 1858  w
+ 1859  last | more
+ 1860  ls
+ 1861  w
+ 1862  cd cvw
+ 1863  ls
+ 1864  git pull
+ 1865  git submodule update addins/riscv-arch-test~
+ 1866  git submodule update addins/riscv-arch-test
+ 1867  cd sim
+ 1868  ls
+ 1869  make --jobs
+ 1870  cd ..
+ 1871  source setup.sh
+ 1872  cd sim
+ 1873  make --jobs
+ 1874  regression-wally 
+ 1875  ls
+ 1876  df -h
+ 1877  ls /opt
+ 1878  ls /home
+ 1879  ls -la
+ 1880  w
+ 1881  ls -la
+ 1882  ls /home
+ 1883  ls
+ 1884  ls -la
+ 1885  cd
+ 1886  ls
+ 1887  cd ecen4243S25
+ 1888  git pull
+ 1889  cd ..
+ 1890  ls
+ 1891  cp ecen4243S25/remove.sh .
+ 1892  cp ecen4243S25/deleteDS.sh .
+ 1893  ./remove.sh 
+ 1894  ./deleteDS.sh 
+ 1895  ls
+ 1896  ls -latr
+ 1897  ls -la python/
+ 1898  ls
+ 1899  w
+ 1900  ls -la
+ 1901  ls
+ 1902  iostat
+ 1903  free -h
+ 1904  more /proc/meminfo 
+ 1905  btop
+ 1906  lscpu
+ 1907  ls
+ 1908  ls -la
+ 1909  ls
+ 1910  emacs
+ 1911  ls
+ 1912  source okstate.edu
+ 1913  ls
+ 1914  source okstate.sh 
+ 1915  vsim
+ 1916  xit
+ 1917  exit
+ 1918  source okstate.sh
+ 1919  more okstate.sh 
+ 1920  cd ecen4243S25
+ 1921  cd SV
+ 1922  ls
+ 1923  vsim -do sample.do
+ 1924  exit
+ 1925  emacs
+ 1926  exit
+ 1927  sudo reboot
+ 1928  emaCS
+ 1929  emacs
+ 1930  source okstate.sh 
+ 1931  vsim
+ 1932  cd ecen4243S25/SV
+ 1933  ls
+ 1934  vsim -do sample.do
+ 1935  ls -la
+ 1936  cal -3
+ 1937  echo $XDG_SESSION_
+ 1938  echo $XDG_SESSION_TYPE 
+ 1939  sudo apt install xrdp
+ 1940  sudo systemctl start xrdp
+ 1941  sudo systemctl enable xrdp
+ 1942  sudo systemctl status xrdp
+ 1943  cd
+ 1944  ./update.sh 
+ 1945  sudo usermod -aG xrdp $USER
+ 1946  newgrp xrdp
+ 1947  last | more
+ 1948  ./update.sh 
+ 1949  ls
+ 1950  ifconfig -a
+ 1951  sudo apt install xfce4 xfce4-goodies
+ 1952  sudo apt install xrdp
+ 1953  sudo systemctl restart xrdp
+ 1954  history
+ 1955  ps -ef | grep x2go
+ 1956  sudo apt-get install x2goserver
+ 1957  ps -ef | grep x2go
+ 1958  w
+ 1959  ls
+ 1960  ./update.sh 
+ 1961  systemctl status xrdp
+ 1962  history | grep adduser
+ 1963  history
+ 1966  sudo reboot
+ 1967  ls
+ 1968  w
+ 1969  systemctl status xrdp
+ 1970  ls
+ 1971  sudo apt install gnome-tweaks
+ 1972  ./update.sh 
+ 1973  sudo apt autoremove
+ 1974  dconf reset -f /org/gnome/
+ 1975  sudo reboot
+ 1976  echo "gnome-session" | tee ~/.xsession
+ 1977  sudo apt-get install gnome-session-flashback -y 
+ 1978  echo "gnome-session --session=gnome-flashback-metacity --disable-acceleration-check & gnome-panel"
+ 1979  more /etc/xrdp/startwm.sh 
+ 1980  sudo sed -i '4 i\export XDG_CURRENT_DESKTOP=ubuntu:GNOME' /etc/xrdp/startwm.sh
+ 1981  sudo sed -i '4 i\export GNOME_SHELL_SESSION_MODE=ubuntu' /etc/xrdp/startwm.sh
+ 1982  sudo sed -i '4 i\export DESKTOP_SESSION=ubuntu' /etc/xrdp/startwm.sh
+ 1983  more /etc/xrdp/startwm.sh 
+ 1984  systemctl restart xrdp.service
+ 1985  w
+ 1986  more /etc/xrdp/startwm.sh 
+ 1987  sudo reboot
+ 1988  systectl status xrdp
+ 1989  systemctl status xrdp
+ 1990  sudo apt install ubuntu-desktop
+ 1991  systemctl status xrdp
+ 1992  systemctl restart xrdp
+ 1993  systemctl status xrdp
+ 1994  sudo reboot
+ 1995  ls
+ 1996  ./update.sh 
+ 1997  more /etc/xrdp/startwm.sh 
+ 1998  clear
+ 1999  history 
+ 2000  history > history-Jan16.txt

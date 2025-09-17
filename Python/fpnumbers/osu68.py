@@ -1,0 +1,10 @@
+x = 31
+print("x:", x, "type:", type(x))
+b = int("0b101011", 2)
+print("b:", b, "type:", type(b))
+b = bin(x)
+print("Integer:", x, "Binary equivalent:", b)
+a = oct(x)
+print("Integer:", x, "Octal equivalent:", a)
+c = hex(x)
+print("Integer:", x, "Hex equivalent:", c)

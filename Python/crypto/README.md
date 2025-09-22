@@ -5,6 +5,8 @@
 * In a web server or REPL exposed to untrusted input, if someone feeds a 10-million-digit integer, the CPU can get stuck converting it to a string, which is a DoS vector. <br>
 * To prevent this, Python 3.11 introduced a default cap on int → str and str → int conversions. <br>
 
+See [PEP 670: Convert macros to functions in the Python C API](https://peps.python.org/pep-0670/).
+
 ## New Limit in Python 3.11+
 
 Starting in **Python 3.11**, Python enforces a safeguard when converting very large integers

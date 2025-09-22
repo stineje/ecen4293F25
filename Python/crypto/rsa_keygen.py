@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Tiny RSA demo (≈2048-bit modulus) using only Python big integers.
+# Tiny RSA demo (\approx 2048-bit modulus) using only Python big integers.
 # - Keygen with Miller–Rabin probable primes
 # - Encrypt/Decrypt (textbook RSA)
 # - Sign/Verify (textbook RSA)

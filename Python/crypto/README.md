@@ -7,6 +7,17 @@
 
 See [PEP 670: Convert macros to functions in the Python C API](https://peps.python.org/pep-0670/).
 
+## Does Python still compute big integers internally?
+
+Yes — absolutely.
+* Python’s int is still arbitrary precision.
+* Arithmetic (+, *, pow, modular exponentiation, etc.) all work on integers as big as your memory allows.
+* The restriction is only on converting between integers and their string representation.
+* So, for your F(1_000_000) Fibonacci number:
+* Python fully computed the exact result (200k+ digits).
+* You just couldn’t str(Fn) it without raising the limit.
+* Operations like Fn % 1234567 or Fn.bit_length() work fine without touching the limit.
+
 ## New Limit in Python 3.11+
 
 Starting in **Python 3.11**, Python enforces a safeguard when converting very large integers

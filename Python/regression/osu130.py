@@ -1,5 +1,5 @@
 import pylab
-from book import strlinregr
+from strlinregr import strlinregr
 import numpy as np
 import matplotlib.pyplot as plt
 

@@ -14,6 +14,7 @@ y = np.array([25, 70, 380, 550, 610, 1220, 830, 1450])
 # Use curve_fit to perform the least squares fit
 # p_opt contains the optimal values for the parameters (m, c)
 # p_cov is the covariance of the parameters (optional)
+# great url:  https://machinelearningmastery.com/curve-fitting-with-python/
 p_opt, p_cov = curve_fit(linear_model, x, y)
 
 # Extract the fitted slope and intercept

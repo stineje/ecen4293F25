@@ -1,0 +1,98 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, graphicx, geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\title{Huber Regression: A Robust Alternative to Least Squares}
+\author{James E. Stine and Marcus Mellor\\
+Electrical and Computer Engineering Department\\
+Oklahoma State University\\
+Stillwater, OK 74078, USA}
+\date{}
+\date{}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  frame=single,
+  breaklines=true
+}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+When modeling data with regression, we often assume that errors are roughly Gaussian and that extreme observations are rare. Under these conditions, Ordinary Least Squares (OLS) is attractive because it is simple, efficient, and mathematically well-understood. 
+
+Ordinary Least Squares (OLS) regression minimizes the sum of squared residuals:
+\[
+\min_{\beta_0,\beta_1} \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2.
+\]
+This objective gives OLS very desirable properties when the errors $\varepsilon_i$ are independent, identically distributed, and approximately Gaussian:
+\begin{itemize}[leftmargin=1.5em]
+\item OLS is an \emph{unbiased estimator} of the regression parameters.
+\item OLS achieves the \emph{minimum variance} among all linear unbiased estimators (the Gauss--Markov theorem).
+\item Under Gaussian errors, OLS is also the \emph{maximum likelihood estimator}.
+\end{itemize}
+
+However, the squaring of residuals means that large errors are penalized quadratically. For example, if one residual is 5 times larger than another, its contribution to the objective is $5^2 = 25$ times larger. A small number of extreme observations (``outliers'') can therefore dominate the regression line, pulling it away from the trend that represents the bulk of the data. 
+
+To address this sensitivity, Peter J.~Huber proposed a modified loss function that retains the quadratic penalty for small residuals (where Gaussian assumptions are reasonable) but switches to a linear penalty for large residuals (where robustness is needed)~\cite{huber1964}. This approach preserves much of the efficiency of OLS under Gaussian errors while dramatically reducing the influence of outliers. In the next section, we introduce the Huber loss function formally.
+
+\section*{Huber Loss Function}
+Peter J. Huber (1964) proposed a hybrid loss function:
+\begin{eqnarray*}
+\rho_\delta(r) =
+\begin{cases}
+\tfrac{1}{2} \cdot r^2, & |r| \leq \delta, \\[6pt]
+\delta \cdot \big(|r| - \tfrac{1}{2} \cdot \delta \big), & |r| > \delta,
+\end{cases}
+\end{eqnarray*}
+where $r$ is the residual and $\delta$ is a tuning threshold~\cite{huber1964}.
+
+\begin{itemize}[leftmargin=1.5em]
+\item For \(|r| \leq \delta\): behaves like OLS (quadratic penalty).
+\item For \(|r| > \delta\): behaves like Least Absolute Deviations (linear penalty).
+\end{itemize}
+
+\subsection*{Choosing $\delta$}
+\begin{itemize}[leftmargin=1.5em]
+\item $\delta = 1.345 \cdot \sigma$ (where $\sigma$ is the residual scale) yields $\approx 95\%$ efficiency if errors are Gaussian \cite{huber2009}.
+\item Larger $\delta$ $\Rightarrow$ closer to OLS (less robust).
+\item Smaller $\delta$ $\Rightarrow$ closer to the Least Absolute Deviations (LAD) regression (more robust).
+\end{itemize}
+
+\subsection*{When to Use Huber Regression}
+\begin{itemize}[leftmargin=1.5em]
+\item Data are mostly well-behaved but contain a few extreme outliers.
+\item Example: salaries, income, or experimental data where a few points are corrupted.
+\end{itemize}
+
+
+\section*{Exercises}
+Work through the following steps in order. Each exercise builds on the previous one to help you connect the concepts of OLS, robustness, and the role of the Huber parameter~$\delta$.
+
+\begin{enumerate}[leftmargin=1.5em]
+\item Model fitting: Fit both Ordinary Least Squares (OLS) and Huber regression to the salary dataset. Record the slope and intercept for each method.  Use SciPy to compute the Huber loss.  Try to avoid using ChatGPT or other AI and learn how to use SciPy to compute OLS with Huber loss.
+\item  You can get help from \verb!pydoc! on SciPy least squares option with \verb!python3 -m pydoc scipy.optimize.least_squares! or \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html}.
+\item Comparing influence: Examine how the slopes and intercepts differ. Which method appears more influenced by the very highest salaries in the dataset? What does this tell you about the sensitivity of OLS compared to Huber regression?  
+\item Effect of the tuning parameter: Re-fit the Huber model with different thresholds $\delta$ (e.g., $0.5\sigma$, $1.345\sigma$, and $3\sigma$). Plot all regression lines on the same graph. How does changing $\delta$ shift the balance between efficiency (OLS-like) and robustness?  
+\item Reflection: Think about the nature of real-world salary data. Salaries are usually \emph{right-skewed} (a few very high earners pull the distribution upward), and they often contain \emph{outliers} (superstars or data entry errors). Do you think the residuals from a regression model are likely to be perfectly Gaussian in this setting? Why or why not? Based on your reasoning, which regression method (OLS, Huber, or even median/quantile regression) would you prefer, and why?
+\end{enumerate}
+
+\section*{Stubbed Python Code (with guided TODOs)}
+
+The following template provides the overall structure.  
+Each \texttt{TODO} gives you a hint for how to complete the function.  
+You are not given the final code, but the steps are outlined within the starter code in the repository under the MLB subdirectory.
+
+\bibliographystyle{IEEEtran}
+\bibliography{huber}
+
+\end{document}

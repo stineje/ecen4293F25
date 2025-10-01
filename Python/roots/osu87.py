@@ -1,4 +1,3 @@
-from book import bisect
 import matplotlib.pyplot as plt
 import numpy as np
 

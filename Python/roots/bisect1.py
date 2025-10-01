@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def bisect(func, xl, xu, es=1.e-7, maxit=30):
+def bisect1(func, xl, xu, es=1.e-7, maxit=30):
     """
     Uses the bisection method to estimate a root of func(x).
     The method is iterated until the relative error from

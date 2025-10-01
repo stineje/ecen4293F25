@@ -1,4 +1,4 @@
-from book import bisect
+from bisect1 import bisect1
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -11,7 +11,7 @@ def f(m):
     return np.sqrt(m*g/cd)*np.tanh(np.sqrt(g*cd/m)*t)-v
 
 
-(m, fm, ea, iter) = bisect(f, 50, 200)
+(m, fm, ea, iter) = bisect1(f, 50, 200)
 print('mass = {0:7.8f} kg'.format(m))
 print('function value = {0:7.3g}'.format(fm))
 print('relative error = {0:7.3g}'.format(ea))

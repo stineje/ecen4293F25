@@ -1,3 +1,21 @@
+# Emacs backup files
+*~
+\#*\#
+.\#*
+
+# Emacs auto-save files
+*.autosave
+
+# Emacs directory local variables
+.dir-locals.el
+
+# Emacs lock files
+*#
+
+# Other temporary or swap files
+*.swp
+*.swo
+
 # Ignore Python cache directories
 __pycache__/
 *.py[cod]

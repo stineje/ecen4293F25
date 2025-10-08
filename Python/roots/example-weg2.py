@@ -16,7 +16,7 @@ x0, x1 = 0.9, 1.2
 
 x_star, ea, iters = wegstein(g, x0, x1, Ea=1e-10, maxit=50)
 
-print(f"x ≈ {x_star:.12g}")
+print(f"x \\approx {x_star:.12g}")
 print(f"Check: f(x) = {f(x_star):.12g}  (target={target})")
 print(f"Residual f(x)-target = {f(x_star) - target:.3e}")
 print(f"ea ≈ {ea:.3e}, iterations = {iters}")

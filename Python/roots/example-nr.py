@@ -19,7 +19,7 @@ x_star, F_at_x, ea, iters = newtraph(F, Fp, x0, Ea=1e-10, maxit=50)
 
 # Report
 f_val = x_star - math.exp(-x_star)*math.sin(x_star**2)
-print(f"x ≈ {x_star:.12g}")
-print(f"f(x) ≈ {f_val:.12g}  (target = 0.9)")
-print(f"Residual f(x) - 0.9 ≈ {f_val - 0.9:.3e}")
+print(f"x \\approx {x_star:.12g}")
+print(f"f(x) \\approx {f_val:.12g}  (target = 0.9)")
+print(f"Residual f(x) - 0.9 \\approx {f_val - 0.9:.3e}")
 print(f"Relative error ea ≈ {ea:.3e}, iterations = {iters}")

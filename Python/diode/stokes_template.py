@@ -20,7 +20,7 @@ def residual(A):
 
 
 def residual_derivative(A):
-    """ TODO: Students implement Newton-Raphson to find A"""
+    """ TODO: Implement Newton-Raphson to find A"""
 
 
 # Compute stream function and velocities

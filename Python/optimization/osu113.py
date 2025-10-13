@@ -12,7 +12,7 @@ xmin, fmin, ea, n = parabolic_min(f, x1, x2, x3, Ea=1e-5, verbose=True)
 print('Solution = {0:8.15g}'.format(xmin))
 print('Function value at solution = {0:8.15g}'.format(fmin))
 print('Relative error = {0:8.3e}'.format(ea))
-print('Number of iterations = {0:5d}'.format(n))
+print(f'Number of iterations = {n}')
 
 x = np.linspace(min(x1, x3), max(x1, x3), 400)
 plt.figure(figsize=(8,5))

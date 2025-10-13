@@ -1,4 +1,4 @@
-from book import bisect
+from bisect import bisect
 import matplotlib.pyplot as plt
 import numpy as np
 

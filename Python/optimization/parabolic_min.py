@@ -2,7 +2,7 @@ import numpy as np
 
 def parabolic_min(f, x1, x2, x3, Ea=1e-5, maxit=50, verbose=True):
     """
-    Successive parabolic interpolation per Chapra & Canale.
+    Successive parabolic interpolation per Chapra's textbook
     Starts with (x1 < x2 < x3), computes parabola through them,
     and iterates until error <= Ea or maxit reached.
     Returns (xopt, f(xopt), ea, iterations).
@@ -13,6 +13,7 @@ def parabolic_min(f, x1, x2, x3, Ea=1e-5, maxit=50, verbose=True):
     f1, f2, f3 = f(x1), f(x2), f(x3)
     ea = np.inf
 
+    # Intelligent printing of dashed line by length of header (match output from Example 7.3)
     if verbose:
         header = f"{'Iter':>4} | {'x1':>10} | {'f(x1)':>10} | {'x2':>10} | {'f(x2)':>10} | {'x3':>10} | {'f(x3)':>10} | {'x4':>10} | {'f(x4)':>10} | {'ea':>10}"
         print(header)
@@ -36,7 +37,7 @@ def parabolic_min(f, x1, x2, x3, Ea=1e-5, maxit=50, verbose=True):
             x4 = np.clip(x4, np.nextafter(x1, x3), np.nextafter(x3, x1))
         f4 = f(x4)
 
-        # Chapra’s rules (Fig. 7.9)
+        # Chapra’s Strategy Rules (Fig. 7.9)
         if x1 < x4 < x2:
             if f4 < f2:
                 x3, f3 = x2, f2
@@ -59,6 +60,7 @@ def parabolic_min(f, x1, x2, x3, Ea=1e-5, maxit=50, verbose=True):
         if ea <= Ea:
             break
 
+    # Intelligent printing of dashed line by length of header
     if verbose:
         print("-" * len(header))
 

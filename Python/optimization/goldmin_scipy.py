@@ -24,7 +24,7 @@ print("Golden Section Search Comparison (SciPy vs Custom goldmin)")
 print("-" * 90)
 print(f"{'Method':<20}\t{'x_min':>12}\t{'f_min':>15}\t{'Error':>15}\t{'Iters/Evals':>15}")
 print("-" * 90)
-print(f"{'Custom goldmin':<20}\t{xmin:12.8f}\t{fmin:15.8f}\t{ea:15.3e}\t{n:15d}")
+print(f"{'Chapra goldmin':<20}\t{xmin:12.8f}\t{fmin:15.8f}\t{ea:15.3e}\t{n:15d}")
 print(f"{'SciPy minimize_scalar':<20}\t{res.x:12.8f}\t{res.fun:15.8f}\t{1.0e-5:15.3e}\t{res.nfev:15d}")
 print("-" * 90)
 

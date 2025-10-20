@@ -27,3 +27,4 @@ def strlinregr(x, y):
     Rsq = SSR/SST
     SE = np.sqrt(SSE/(n-2))
     return a0, a1, Rsq, SE
+

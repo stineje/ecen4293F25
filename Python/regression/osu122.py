@@ -68,7 +68,7 @@ plt.tight_layout()
 plt.show()
 
 
-# --- Second histogram (formerly pylab) ---
+# --- Second histogram ---
 plt.figure(figsize=(8, 6))
 plt.hist(ce, bins=8, range=[6.39, 6.79], color='w', edgecolor='k')
 plt.plot(x, 1.2 * y, color='g')

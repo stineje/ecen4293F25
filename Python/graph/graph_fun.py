@@ -4,7 +4,7 @@ import numpy as np
 import time
 
 class Graph:
-    """ Friday Fun Day: A simple undirected graph using NetworkX. """
+    """ A simple undirected graph using NetworkX. """
 
     def __init__(self, filename):
         """ Initialize and build the graph from a file. """

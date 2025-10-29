@@ -2,22 +2,22 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 class Graph:
-    """ A simple undirected weighted graph using NetworkX. """
+    """A simple undirected weighted graph using NetworkX."""
 
     def __init__(self, filename):
-        """ Initialize and build the graph from a file. """
+        """Initialize and build the graph from a file."""
         self.graph = nx.Graph()
         self.build_graph(filename)
 
     def build_graph(self, filename):
-        """ Build the graph from the specified file. """
+        """Build the graph from the specified file."""
         with open(filename, 'r') as file:
             for line in file:
                 u, v, weight = line.strip().split()
                 self.graph.add_edge(u, v, weight=int(weight))
 
     def shortest_path(self, source, target):
-        """ Find and return the shortest path from source to target based on weights. """
+        """Find and return the shortest path from source to target based on weights."""
         try:
             path = nx.shortest_path(self.graph, source=source, target=target, weight='weight')
             return path
@@ -26,7 +26,7 @@ class Graph:
             return None
 
     def longest_path(self):
-        """ Find the longest shortest path (i.e., diameter of the graph) based on weights. """
+        """Find the longest shortest path (diameter of the graph) based on weights."""
         longest = 0
         longest_path = None
         for node in self.graph.nodes():
@@ -41,10 +41,12 @@ class Graph:
                         continue
         return longest, longest_path
 
-    def draw_graph(self, path=None):
-        """ Draw the graph with optional path highlighted. """
-        pos = nx.spring_layout(self.graph)
-        nx.draw(self.graph, pos, with_labels=True, node_color='lightblue', node_size=500, edge_color='gray')
+    def draw_graph(self, path=None, filename=None):
+        """Draw the graph, highlight the path if given, and optionally save to file."""
+        pos = nx.spring_layout(self.graph, seed=0)
+        plt.figure(figsize=(8, 6))
+        nx.draw(self.graph, pos, with_labels=True, node_color='lightblue',
+                node_size=500, edge_color='gray')
 
         if path:
             path_edges = list(zip(path, path[1:]))
@@ -56,14 +58,23 @@ class Graph:
         nx.draw_networkx_edge_labels(self.graph, pos, edge_labels=edge_labels)
 
         plt.title("Graph Visualization")
+        plt.tight_layout()
+
+        # ✅ Save to file if filename provided
+        if filename:
+            plt.savefig(filename, dpi=300)
+            print(f"Graph saved to {filename}")
+
         plt.show()
 
+# -----------------------------
 # Example usage
-filename = "random_weighted_graph.txt"  
+# -----------------------------
+filename = "random_weighted_graph.txt"
 graph = Graph(filename)
 
-source = "88"  
-target = "61" 
+source = "88"
+target = "61"
 
 # Find the shortest path and print it
 path = graph.shortest_path(source, target)
@@ -75,5 +86,6 @@ longest_path_length, longest_path = graph.longest_path()
 print(f"Length of the longest path in the graph: {longest_path_length}")
 print(f"Longest path in the graph: {longest_path}")
 
-# Draw the graph and highlight the shortest path
-graph.draw_graph(path)
+# Draw and save graph image
+output_filename = f"graph_{source}_to_{target}.png"
+graph.draw_graph(path, output_filename)

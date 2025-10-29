@@ -62,10 +62,14 @@ class Graph:
         self.print_time_in_engineering_units(end_time - start_time, "Time taken to find longest path")
         return longest, longest_path
 
-    def draw_graph(self, path=None):
-        """ Draw the graph with optional path highlighted. """
-        pos = nx.spring_layout(self.graph)
-        nx.draw(self.graph, pos, with_labels=True, node_color='lightblue', node_size=500, edge_color='gray')
+    def draw_graph(self, path=None, filename=None):
+        """Draw the graph with optional path highlighted and optionally save to a PNG."""
+        pos = nx.spring_layout(self.graph, seed=0)
+        plt.figure(figsize=(8, 6))
+        nx.draw(
+            self.graph, pos, with_labels=True,
+            node_color='lightblue', node_size=500, edge_color='gray'
+        )
 
         if path:
             path_edges = list(zip(path, path[1:]))
@@ -73,6 +77,13 @@ class Graph:
             nx.draw_networkx_edges(self.graph, pos, edgelist=path_edges, edge_color='red', width=2)
 
         plt.title("Graph Visualization")
+        plt.tight_layout()
+
+        # Save if filename provided
+        if filename:
+            plt.savefig(filename, dpi=300)
+            print(f"Graph saved to {filename}")
+
         plt.show()
 
     def print_time_in_engineering_units(self, time_in_seconds, label):
@@ -99,4 +110,4 @@ print(f"Length of the longest path in the graph: {longest_path_length}")
 print(f"Longest path in the graph: {longest_path}")
 
 # Draw the graph and highlight the shortest path
-graph.draw_graph(path)
+graph.draw_graph(path, "mygraph.png")

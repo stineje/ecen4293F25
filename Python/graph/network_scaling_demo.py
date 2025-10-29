@@ -2,10 +2,11 @@ import networkx as nx
 import time
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
-# ---------------------------
-# 1. Generate graphs using built-in generators
-# ---------------------------
+# ------------------------------------------
+# 1. Graph generator
+# ------------------------------------------
 def generate_graph(n, p=0.05, generator="erdos_renyi"):
     """Return a NetworkX graph with n nodes using the chosen generator."""
     if generator == "erdos_renyi":
@@ -20,17 +21,22 @@ def generate_graph(n, p=0.05, generator="erdos_renyi"):
     else:
         raise ValueError(f"Unknown generator type: {generator}")
 
-# ---------------------------
-# 2. Benchmark function
-# ---------------------------
-def measure_shortest_path_scaling(generator="erdos_renyi", p=0.05, max_nodes=2000):
+# ------------------------------------------
+# 2. Benchmarking
+# ------------------------------------------
+def measure_shortest_path_scaling(generator="erdos_renyi", p=0.05):
     """Measure time to compute shortest path as n grows."""
     sizes = [100, 200, 400, 800, 1600]
     times = []
+    sample_graphs = []   # keep small graphs for visualization
 
     for n in sizes:
         G = generate_graph(n, p, generator)
-        source, target = 0, n - 1 if generator != "grid" else (0, (int(np.sqrt(n)) - 1, int(np.sqrt(n)) - 1))
+        if n <= 400:
+            sample_graphs.append((n, G))
+
+        source = 0
+        target = n - 1 if generator != "grid" else (0, (int(np.sqrt(n)) - 1, int(np.sqrt(n)) - 1))
 
         start = time.time()
         try:
@@ -43,31 +49,66 @@ def measure_shortest_path_scaling(generator="erdos_renyi", p=0.05, max_nodes=200
         times.append(t)
         print(f"n={n:4d}  time={t:8.6f} s")
 
-    return np.array(sizes), np.array(times)
+    return np.array(sizes), np.array(times), sample_graphs
 
-# ---------------------------
-# 3. Plot scaling
-# ---------------------------
+# ------------------------------------------
+# 3. Plot scaling and save PNG
+# ------------------------------------------
 def plot_scaling(sizes, times):
-    """Plot runtime scaling vs. theoretical O(n^2)."""
-    plt.figure(figsize=(7, 5))
-    plt.loglog(sizes, times, 'ro-', label='Measured runtime')
-    plt.loglog(sizes, 1e-7 * sizes**2, 'b--', label=r'O($n^2$) reference')
-    plt.loglog(sizes, 5e-6 * sizes, 'g-.', label=r'O($n$) reference')
-    plt.xlabel('Number of Nodes (n)')
-    plt.ylabel('Runtime (s)')
-    plt.title('Shortest Path Scaling in NetworkX')
-    plt.legend()
-    plt.grid(True, which="both", ls=":")
-    plt.tight_layout()
-    plt.savefig("networkx_scaling.png", dpi=300)
-    print("Plot saved to networkx_scaling.png")
+    """Plot runtime scaling vs. theoretical O(n²) and O(n)."""
+    fig, ax = plt.subplots(figsize=(7, 5))
+    ax.loglog(sizes, times, 'ro-', label='Measured runtime')
+    ax.loglog(sizes, 1e-7 * sizes**2, 'b--', label=r'O($n^2$) reference')
+    ax.loglog(sizes, 5e-6 * sizes, 'g-.', label=r'O($n$) reference')
+    ax.set_xlabel('Number of Nodes (n)')
+    ax.set_ylabel('Runtime (s)')
+    ax.set_title('Shortest Path Scaling in NetworkX')
+    ax.legend()
+    ax.grid(True, which="both", ls=":")
+    fig.tight_layout()
+
+    filename = "networkx_scaling.png"
+    fig.savefig(filename, dpi=300, bbox_inches="tight")
+    if os.path.exists(filename):
+        print(f"Scaling plot saved to {filename}")
+    else:
+        print("Warning: PNG save failed!")
+
     plt.show()
 
-# ---------------------------
-# 4. Main script
-# ---------------------------
+# ------------------------------------------
+# 4. Plot example graphs and save PNG
+# ------------------------------------------
+def plot_example_graphs(sample_graphs, generator):
+    """Show representative graphs for visualization."""
+    fig, axes = plt.subplots(1, len(sample_graphs), figsize=(15, 4))
+    if len(sample_graphs) == 1:
+        axes = [axes]  # handle single graph case
+
+    for ax, (n, G) in zip(axes, sample_graphs):
+        pos = nx.spring_layout(G, seed=0)
+        nx.draw(G, pos, node_color='skyblue', edge_color='gray',
+                node_size=100, with_labels=False, ax=ax)
+        ax.set_title(f"{generator}\n(n={n})")
+        ax.axis('off')
+
+    plt.suptitle(f"Example Graphs from {generator} Generator", fontsize=14)
+    plt.tight_layout()
+
+    filename = f"{generator}_examples.png"
+    fig.savefig(filename, dpi=300, bbox_inches="tight")
+    if os.path.exists(filename):
+        print(f"Example graphs saved to {filename}")
+    else:
+        print("Warning: PNG save failed!")
+
+    plt.show()
+
+# ------------------------------------------
+# 5. Main
+# ------------------------------------------
 if __name__ == "__main__":
-    generator_type = "erdos_renyi"   # Try: "barabasi_albert", "watts_strogatz", "grid"
-    sizes, times = measure_shortest_path_scaling(generator=generator_type)
+    generator_type = "barabasi_albert"  # try "erdos_renyi", "watts_strogatz", or "grid"
+    sizes, times, sample_graphs = measure_shortest_path_scaling(generator=generator_type)
     plot_scaling(sizes, times)
+    plot_example_graphs(sample_graphs, generator_type)

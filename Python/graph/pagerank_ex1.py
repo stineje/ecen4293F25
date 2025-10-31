@@ -49,6 +49,7 @@ plt.ylabel("PageRank Score")
 plt.title("PageRank Evolution Over Time for Each Node")
 plt.legend(loc="best")
 plt.grid(True)
+plt.savefig("pagerank_ex1.png", dpi=300, bbox_inches='tight')
 plt.show()
 
 # Print the final PageRank scores

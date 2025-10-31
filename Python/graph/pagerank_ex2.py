@@ -55,6 +55,7 @@ plt.legend(loc='best')
 
 # Show the plot
 plt.grid(True)
+plt.savefig("pagerank_ex2.png", dpi=300, bbox_inches='tight')
 plt.show()
 
 # Create a directed graph using NetworkX from the adjacency matrix (normalized)

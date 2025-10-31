@@ -13,7 +13,7 @@ A = np.array([[0.6, 0.4, 0.2, 0.3],
 states_over_time = [v]
 
 # Define how many times you want to multiply the matrix by itself
-num_iterations = 10
+num_iterations = 20
 
 # Perform matrix multiplication
 for i in range(1, num_iterations + 1):

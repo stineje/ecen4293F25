@@ -2,7 +2,6 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
 
-# PR for slide 27, L22
 G = nx.DiGraph()
 
 # Add edges to the graph

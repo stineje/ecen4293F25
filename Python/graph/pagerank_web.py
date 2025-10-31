@@ -1,70 +1,86 @@
 import numpy as np
-import networkx as nx
 import matplotlib.pyplot as plt
+import networkx as nx
 
-# ----- Graph: nodes and directed edges -----
-nodes = ["Google", "Facebook", "YouTube", "Twitter", "Wikipedia", "Amazon"]
-edges = [
-    ("Google", "YouTube"), ("Google", "Wikipedia"), ("Google", "Twitter"),
-    ("Facebook", "Google"), ("Facebook", "YouTube"),
-    ("YouTube", "Google"), ("YouTube", "Twitter"), ("YouTube", "Wikipedia"),
-    ("Twitter", "YouTube"), ("Twitter", "Wikipedia"), ("Twitter", "Amazon"),
-    ("Wikipedia", "Google"), ("Wikipedia", "YouTube"), ("Wikipedia", "Amazon"),
-    ("Amazon", "Google"), ("Amazon", "Wikipedia"),
-]
+# Define the initial state vector and Markov matrix
+v = np.array([0.1, 0.2, 0.1, 0.3, 0.1, 0.2])
 
-N = len(nodes)
-idx = {n: i for i, n in enumerate(nodes)}
+A = np.array([
+    [0, 0.025, 0.45, 0.025, 0.025, 0.025],  # Google
+    [0.025, 0, 0.167, 0.025, 0.025, 0.025],  # Facebook
+    [0.45, 0.167, 0, 0.167, 0.167, 0.167],  # YouTube
+    [0.025, 0.025, 0.167, 0, 0.025, 0.025],  # Twitter
+    [0.025, 0.025, 0.167, 0.167, 0, 0.308],  # Wikipedia
+    [0.025, 0.025, 0.167, 0.025, 0.308, 0]  # Amazon
+])
 
-# ----- Build raw row-stochastic link matrix P_raw -----
-P_raw = np.zeros((N, N), dtype=float)
-outdeg = {n: 0 for n in nodes}
-for u, v in edges:
-    outdeg[u] += 1
-for u, v in edges:
-    i, j = idx[u], idx[v]
-    P_raw[i, j] += 1.0 / outdeg[u]  # each outlink equally likely
+# Compute the sum of each column
+col_sum = A.sum(axis=0)
+# Divide each element in A by the corresponding column sum
+# Avoid division by zero by handling cases where column sum is zero
+A = np.divide(A, col_sum, where=col_sum != 0)
 
-# Handle possible dangling nodes (none here; kept for robustness)
-for n in nodes:
-    if outdeg[n] == 0:
-        P_raw[idx[n], :] = 1.0 / N
+# Initialize a list to store the state vectors over time
+states_over_time = [v]
 
-# ----- Google/Markov matrix with damping (teleport) -----
-alpha = 0.85
-G = alpha * P_raw + (1 - alpha) / N * np.ones((N, N))
-assert np.allclose(G.sum(axis=1), 1.0)  # rows sum to 1
+# Define how many iterations
+num_iterations = 15
 
-# ----- Power iteration & history (start from a one-hot for visible transients) -----
-T = 20                           # number of iterations to plot
-pi = np.zeros(N); pi[idx["Google"]] = 1.0   # start at Google
-history = [pi.copy()]
-for _ in range(T):
-    pi = pi @ G                  # left-eigenvector iteration
-    history.append(pi.copy())
-history = np.vstack(history)     # shape (T+1, N)
+# Perform iterative matrix multiplication (Markov process)
+for i in range(1, num_iterations + 1):
+    # Multiply the previous state by A
+    A_power_to_the_n = np.linalg.matrix_power(A, i)
+    result = np.dot(A, states_over_time[-1])
+    print(f"Matrix after multiplication {i}:")
+    print(A_power_to_the_n, "\n")
+    print(f"State vector after iteration {i}:")
+    # This prints the result state vector rounded to 6 decimal places
+    print(np.round(result, 6), "\n")
+    states_over_time.append(result)
 
-# ----- (Optional) stationary check with networkx -----
-Gnx = nx.DiGraph()
-Gnx.add_nodes_from(nodes)
-Gnx.add_edges_from(edges)
-pr = nx.pagerank(Gnx, alpha=alpha)
-pi_nx = np.array([pr[n] for n in nodes])
-# print("Stationary (nx):", dict(zip(nodes, np.round(pi_nx, 6))))
+# Convert the list to a numpy array for easier manipulation
+states_over_time = np.array(states_over_time)
 
-# ----- Plot -----
-plt.figure(figsize=(5.2, 3.6))
-for j, name in enumerate(nodes):
-    plt.plot(history[:, j], label=name)
-plt.xlabel("Iteration")
-plt.ylabel("Probability")
-plt.ylim(0.0, 0.4)         
+# Plot each state's probability over time
+plt.figure(figsize=(10, 6))
+plt.plot(states_over_time[:, 0], label='Google', marker='o')
+plt.plot(states_over_time[:, 1], label='FB', marker='o')
+plt.plot(states_over_time[:, 2], label='YouTube', marker='o')
+plt.plot(states_over_time[:, 3], label='X', marker='o')
+plt.plot(states_over_time[:, 4], label='Wiki', marker='o')
+plt.plot(states_over_time[:, 5], label='Amazon', marker='o')
+
+# Add labels and title
+plt.xlabel('Time Steps')
+plt.ylabel('Probability')
+plt.title('Probabilities of Different Activities Over Time')
+plt.legend(loc='best')
+
+# Show the plot
 plt.grid(True)
-plt.legend(loc="upper right", fontsize=8, ncol=2, frameon=False)
-plt.tight_layout()
-
-# Save and show
-out_path = "pagerank_web.png"
-plt.savefig(out_path, dpi=200, bbox_inches="tight")
+plt.savefig("pagerank_web.png", dpi=300, bbox_inches='tight')
 plt.show()
-print(f"Saved plot to {out_path}")
+
+# Create a directed graph using NetworkX from the adjacency matrix (normalized)
+G = nx.from_numpy_array(A, create_using=nx.DiGraph)
+print(A)
+
+# Compute PageRank using NetworkX's built-in function
+pagerank = nx.pagerank(G, alpha=0.85)
+
+# Print the PageRank results
+print("PageRank Results (unordered):")
+for node, rank in pagerank.items():
+    print(f"Node {node}: {rank:.6f}")
+
+# Ensure PageRank results are printed in node order (0 to 5)
+print("\nPageRank Results (ordered by node):")
+for node in sorted(pagerank.keys()):
+    print(f"Node {node}: {pagerank[node]:.6f}")
+
+# Explicitly compare PageRank and plotted probabilities in the same order
+for i in range(len(v)):
+    print(f"State vector (Plotted) for Node {
+          i}: {states_over_time[-1][i]:.6f}")
+    # Use integer indexing here
+    print(f"PageRank for Node {i}: {pagerank[i]:.6f}")

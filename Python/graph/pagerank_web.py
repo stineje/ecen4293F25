@@ -6,12 +6,12 @@ import networkx as nx
 v = np.array([0.1, 0.2, 0.1, 0.3, 0.1, 0.2])
 
 A = np.array([
-    [0, 0.025, 0.45, 0.025, 0.025, 0.025],  # Google
-    [0.025, 0, 0.167, 0.025, 0.025, 0.025],  # Facebook
-    [0.45, 0.167, 0, 0.167, 0.167, 0.167],  # YouTube
-    [0.025, 0.025, 0.167, 0, 0.025, 0.025],  # Twitter
-    [0.025, 0.025, 0.167, 0.167, 0, 0.308],  # Wikipedia
-    [0.025, 0.025, 0.167, 0.025, 0.308, 0]  # Amazon
+    [0.025, 0.025, 0.167, 0.025, 0.875, 0.025],  # Google
+    [0.45, 0.025, 0.167, 0.025, 0.025, 0.025],  # Facebook
+    [0.45, 0.025, 0.167, 0.875, 0.025, 0.308],  # YouTube
+    [0.025, 0.025, 0.167, 0.025, 0.025, 0.308],  # Twitter
+    [0.025, 0.45, 0.167, 0.025, 0.025, 0.308],  # Wikipedia
+    [0.025, 0.45, 0.167, 0.025, 0.025, 0.025]  # Amazon
 ])
 
 # Compute the sum of each column
@@ -80,7 +80,6 @@ for node in sorted(pagerank.keys()):
 
 # Explicitly compare PageRank and plotted probabilities in the same order
 for i in range(len(v)):
-    print(f"State vector (Plotted) for Node {
-          i}: {states_over_time[-1][i]:.6f}")
+    print(f"State vector (Plotted) for Node {i}: {states_over_time[-1][i]:.6f}")
     # Use integer indexing here
     print(f"PageRank for Node {i}: {pagerank[i]:.6f}")

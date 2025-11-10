@@ -16,7 +16,7 @@ def generate_random_square_matrix(N):
 
 
 # Example usage:
-N = 100000  # Set the size of the matrix
+N = 1000  # Set the size of the matrix
 matrix = generate_random_square_matrix(N)
 
 # print(f"Random {N}x{N} matrix:")

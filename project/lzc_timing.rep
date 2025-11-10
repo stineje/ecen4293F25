@@ -1,0 +1,431 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : lzc
+Version: W-2024.09-SP4-1
+Date   : Fri Nov  7 12:47:36 2025
+****************************************
+
+Operating Conditions: PVT_1P2V_25C   Library: scc9gena_tt_1.2v_25C
+Wire Load Model Mode: top
+
+  Startpoint: num[28] (input port clocked by vclk)
+  Endpoint: ZeroCnt[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 r
+  num[28] (in)                                   0.030287  0.013474   0.013474 r
+  num[28] (net)                  2     0.006041            0.000000   0.013474 r
+  U172/Y (scc9gena_nor2_1)                       0.018609  0.020845   0.034319 f
+  n125 (net)                     2     0.004058            0.000000   0.034319 f
+  U127/Y (scc9gena_nand2_1)                      0.020295  0.018241   0.052560 r
+  n130 (net)                     2     0.002065            0.000000   0.052560 r
+  U125/Y (scc9gena_o211ai_m)                     0.036652  0.034308   0.086868 f
+  n126 (net)                     1     0.001769            0.000000   0.086868 f
+  U178/Y (scc9gena_inv_0)                        0.019731  0.020317   0.107186 r
+  n128 (net)                     1     0.001555            0.000000   0.107186 r
+  U82/Y (scc9gena_nand2_0)                       0.025831  0.025517   0.132703 f
+  n67 (net)                      1     0.002966            0.000000   0.132703 f
+  U100/Y (scc9gena_nand3_1)                      0.029566  0.028220   0.160923 r
+  n66 (net)                      1     0.003056            0.000000   0.160923 r
+  U99/Y (scc9gena_nand2_1)                       0.022021  0.019015   0.179938 f
+  n65 (net)                      1     0.003483            0.000000   0.179938 f
+  U98/Y (scc9gena_a31oi_1)                       0.036924  0.036001   0.215938 r
+  ZeroCnt[0] (net)               1     0.001771            0.000000   0.215938 r
+  ZeroCnt[0] (out)                               0.036924  0.000000   0.215938 r
+  data arrival time                                                   0.215938
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.215938
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.001453
+
+
+  Startpoint: num[18] (input port clocked by vclk)
+  Endpoint: ZeroCnt[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 r
+  num[18] (in)                                   0.031829  0.014519   0.014519 r
+  num[18] (net)                  2     0.006509            0.000000   0.014519 r
+  U166/Y (scc9gena_inv_1)                        0.017921  0.017963   0.032483 f
+  n116 (net)                     1     0.006783            0.000000   0.032483 f
+  U91/Y (scc9gena_o21ai_2)                       0.056152  0.049494   0.081976 r
+  n99 (net)                      2     0.009862            0.000000   0.081976 r
+  U90/Y (scc9gena_nor2_2)                        0.016687  0.017019   0.098995 f
+  n59 (net)                      2     0.004610            0.000000   0.098995 f
+  U92/Y (scc9gena_nand2_1)                       0.025891  0.021080   0.120075 r
+  n87 (net)                      1     0.003055            0.000000   0.120075 r
+  U97/Y (scc9gena_nand3_1)                       0.027880  0.025916   0.145991 f
+  n63 (net)                      1     0.003484            0.000000   0.145991 f
+  U96/Y (scc9gena_inv_1)                         0.017900  0.018230   0.164221 r
+  n62 (net)                      1     0.003019            0.000000   0.164221 r
+  U95/Y (scc9gena_nand2_1)                       0.017718  0.018431   0.182652 f
+  n69 (net)                      1     0.003392            0.000000   0.182652 f
+  U98/Y (scc9gena_a31oi_1)                       0.036924  0.032579   0.215231 r
+  ZeroCnt[0] (net)               1     0.001771            0.000000   0.215231 r
+  ZeroCnt[0] (out)                               0.036924  0.000000   0.215231 r
+  data arrival time                                                   0.215231
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.215231
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.002160
+
+
+  Startpoint: num[20] (input port clocked by vclk)
+  Endpoint: ZeroCnt[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 f
+  num[20] (in)                                   0.026409  0.016053   0.016053 f
+  num[20] (net)                  2     0.009838            0.000000   0.016053 f
+  U141/Y (scc9gena_inv_1)                        0.031247  0.028474   0.044527 r
+  n100 (net)                     1     0.006972            0.000000   0.044527 r
+  U91/Y (scc9gena_o21ai_2)                       0.027673  0.029128   0.073655 f
+  n99 (net)                      2     0.009838            0.000000   0.073655 f
+  U90/Y (scc9gena_nor2_2)                        0.029339  0.028590   0.102245 r
+  n59 (net)                      2     0.004611            0.000000   0.102245 r
+  U89/Y (scc9gena_nand2_0)                       0.022369  0.020435   0.122680 f
+  n58 (net)                      1     0.001769            0.000000   0.122680 f
+  U88/Y (scc9gena_inv_0)                         0.028395  0.026173   0.148854 r
+  n61 (net)                      1     0.003056            0.000000   0.148854 r
+  U93/Y (scc9gena_nand2_1)                       0.017314  0.017749   0.166603 f
+  n64 (net)                      1     0.003055            0.000000   0.166603 f
+  U95/Y (scc9gena_nand2_1)                       0.024538  0.022066   0.188669 r
+  n69 (net)                      1     0.003322            0.000000   0.188669 r
+  U98/Y (scc9gena_a31oi_1)                       0.036476  0.026089   0.214758 f
+  ZeroCnt[0] (net)               1     0.001771            0.000000   0.214758 f
+  ZeroCnt[0] (out)                               0.036476  0.000000   0.214758 f
+  data arrival time                                                   0.214758
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.214758
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.002634
+
+
+  Startpoint: num[18] (input port clocked by vclk)
+  Endpoint: ZeroCnt[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 r
+  num[18] (in)                                   0.031829  0.014519   0.014519 r
+  num[18] (net)                  2     0.006509            0.000000   0.014519 r
+  U166/Y (scc9gena_inv_1)                        0.017921  0.017963   0.032483 f
+  n116 (net)                     1     0.006783            0.000000   0.032483 f
+  U91/Y (scc9gena_o21ai_2)                       0.056152  0.049494   0.081976 r
+  n99 (net)                      2     0.009862            0.000000   0.081976 r
+  U140/Y (scc9gena_inv_1)                        0.015438  0.012850   0.094827 f
+  n98 (net)                      1     0.003055            0.000000   0.094827 f
+  U139/Y (scc9gena_nand2_1)                      0.025526  0.020719   0.115546 r
+  n97 (net)                      1     0.003018            0.000000   0.115546 r
+  U97/Y (scc9gena_nand3_1)                       0.027880  0.028243   0.143788 f
+  n63 (net)                      1     0.003484            0.000000   0.143788 f
+  U96/Y (scc9gena_inv_1)                         0.017900  0.018230   0.162018 r
+  n62 (net)                      1     0.003019            0.000000   0.162018 r
+  U95/Y (scc9gena_nand2_1)                       0.017718  0.018431   0.180449 f
+  n69 (net)                      1     0.003392            0.000000   0.180449 f
+  U98/Y (scc9gena_a31oi_1)                       0.036924  0.032579   0.213028 r
+  ZeroCnt[0] (net)               1     0.001771            0.000000   0.213028 r
+  ZeroCnt[0] (out)                               0.036924  0.000000   0.213028 r
+  data arrival time                                                   0.213028
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.213028
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.004363
+
+
+  Startpoint: num[30] (input port clocked by vclk)
+  Endpoint: ZeroCnt[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 r
+  num[30] (in)                                   0.029447  0.012905   0.012905 r
+  num[30] (net)                  3     0.005786            0.000000   0.012905 r
+  U172/Y (scc9gena_nor2_1)                       0.018609  0.018252   0.031157 f
+  n125 (net)                     2     0.004058            0.000000   0.031157 f
+  U127/Y (scc9gena_nand2_1)                      0.020295  0.018241   0.049398 r
+  n130 (net)                     2     0.002065            0.000000   0.049398 r
+  U125/Y (scc9gena_o211ai_m)                     0.036652  0.034308   0.083706 f
+  n126 (net)                     1     0.001769            0.000000   0.083706 f
+  U178/Y (scc9gena_inv_0)                        0.019731  0.020317   0.104024 r
+  n128 (net)                     1     0.001555            0.000000   0.104024 r
+  U82/Y (scc9gena_nand2_0)                       0.025831  0.025517   0.129540 f
+  n67 (net)                      1     0.002966            0.000000   0.129540 f
+  U100/Y (scc9gena_nand3_1)                      0.029566  0.028220   0.157760 r
+  n66 (net)                      1     0.003056            0.000000   0.157760 r
+  U99/Y (scc9gena_nand2_1)                       0.022021  0.019015   0.176776 f
+  n65 (net)                      1     0.003483            0.000000   0.176776 f
+  U98/Y (scc9gena_a31oi_1)                       0.036924  0.036001   0.212776 r
+  ZeroCnt[0] (net)               1     0.001771            0.000000   0.212776 r
+  ZeroCnt[0] (out)                               0.036924  0.000000   0.212776 r
+  data arrival time                                                   0.212776
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.212776
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.004615
+
+
+  Startpoint: num[20] (input port clocked by vclk)
+  Endpoint: ZeroCnt[1] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 f
+  num[20] (in)                                   0.026409  0.016053   0.016053 f
+  num[20] (net)                  2     0.009838            0.000000   0.016053 f
+  U104/Y (scc9gena_nor2_2)                       0.035676  0.033358   0.049411 r
+  n142 (net)                     2     0.006508            0.000000   0.049411 r
+  U69/Y (scc9gena_inv_1)                         0.010095  0.008984   0.058395 f
+  n146 (net)                     1     0.001726            0.000000   0.058395 f
+  U184/Y (scc9gena_a21oi_0)                      0.048888  0.043055   0.101450 r
+  n166 (net)                     2     0.002066            0.000000   0.101450 r
+  U135/X (scc9gena_and2_0)                       0.020238  0.044092   0.145542 r
+  n92 (net)                      1     0.001554            0.000000   0.145542 r
+  U73/Y (scc9gena_nand3_0)                       0.026333  0.025497   0.171039 f
+  n86 (net)                      1     0.001555            0.000000   0.171039 f
+  U80/Y (scc9gena_nand2_0)                       0.026029  0.024653   0.195692 r
+  n172 (net)                     1     0.001623            0.000000   0.195692 r
+  U192/Y (scc9gena_nor2_0)                       0.024326  0.016641   0.212333 f
+  ZeroCnt[1] (net)               1     0.001771            0.000000   0.212333 f
+  ZeroCnt[1] (out)                               0.024326  0.000000   0.212333 f
+  data arrival time                                                   0.212333
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.212333
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.005059
+
+
+  Startpoint: num[4] (input port clocked by vclk)
+  Endpoint: ZeroCnt[1] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 f
+  num[4] (in)                                    0.021237  0.010869   0.010869 f
+  num[4] (net)                   2     0.006661            0.000000   0.010869 f
+  U72/Y (scc9gena_inv_1)                         0.028485  0.025811   0.036680 r
+  n57 (net)                      2     0.006343            0.000000   0.036680 r
+  U106/Y (scc9gena_nand2_1)                      0.020745  0.022227   0.058907 f
+  n157 (net)                     2     0.004517            0.000000   0.058907 f
+  U189/Y (scc9gena_nand2_m)                      0.033692  0.028875   0.087782 r
+  n159 (net)                     1     0.001537            0.000000   0.087782 r
+  U84/Y (scc9gena_nand3_0)                       0.027196  0.029955   0.117737 f
+  n93 (net)                      1     0.001555            0.000000   0.117737 f
+  U83/Y (scc9gena_nand2_0)                       0.026257  0.024227   0.141964 r
+  n88 (net)                      1     0.001537            0.000000   0.141964 r
+  U73/Y (scc9gena_nand3_0)                       0.026333  0.029006   0.170969 f
+  n86 (net)                      1     0.001555            0.000000   0.170969 f
+  U80/Y (scc9gena_nand2_0)                       0.026029  0.024653   0.195622 r
+  n172 (net)                     1     0.001623            0.000000   0.195622 r
+  U192/Y (scc9gena_nor2_0)                       0.024326  0.016641   0.212263 f
+  ZeroCnt[1] (net)               1     0.001771            0.000000   0.212263 f
+  ZeroCnt[1] (out)                               0.024326  0.000000   0.212263 f
+  data arrival time                                                   0.212263
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.212263
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.005128
+
+
+  Startpoint: num[30] (input port clocked by vclk)
+  Endpoint: ZeroCnt[4] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 f
+  num[30] (in)                                   0.019794  0.009422   0.009422 f
+  num[30] (net)                  3     0.005775            0.000000   0.009422 f
+  U154/Y (scc9gena_nor2_0)                       0.080358  0.065701   0.075123 r
+  n171 (net)                     2     0.004723            0.000000   0.075123 r
+  U156/Y (scc9gena_nand2_1)                      0.037560  0.036614   0.111738 f
+  n114 (net)                     3     0.007234            0.000000   0.111738 f
+  U103/Y (scc9gena_nor2_1)                       0.042024  0.042189   0.153926 r
+  n177 (net)                     2     0.004089            0.000000   0.153926 r
+  U102/Y (scc9gena_nand2_1)                      0.019891  0.019550   0.173477 f
+  n180 (net)                     2     0.003198            0.000000   0.173477 f
+  U195/Y (scc9gena_nor2b_0)                      0.038582  0.038641   0.212117 r
+  ZeroCnt[4] (net)               1     0.001771            0.000000   0.212117 r
+  ZeroCnt[4] (out)                               0.038582  0.000000   0.212117 r
+  data arrival time                                                   0.212117
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.212117
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.005274
+
+
+  Startpoint: num[18] (input port clocked by vclk)
+  Endpoint: ZeroCnt[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 r
+  num[18] (in)                                   0.031829  0.014519   0.014519 r
+  num[18] (net)                  2     0.006509            0.000000   0.014519 r
+  U166/Y (scc9gena_inv_1)                        0.017921  0.017963   0.032483 f
+  n116 (net)                     1     0.006783            0.000000   0.032483 f
+  U91/Y (scc9gena_o21ai_2)                       0.056152  0.049494   0.081976 r
+  n99 (net)                      2     0.009862            0.000000   0.081976 r
+  U90/Y (scc9gena_nor2_2)                        0.016687  0.017019   0.098995 f
+  n59 (net)                      2     0.004610            0.000000   0.098995 f
+  U89/Y (scc9gena_nand2_0)                       0.027313  0.023678   0.122673 r
+  n58 (net)                      1     0.001772            0.000000   0.122673 r
+  U88/Y (scc9gena_inv_0)                         0.016569  0.017139   0.139812 f
+  n61 (net)                      1     0.003055            0.000000   0.139812 f
+  U93/Y (scc9gena_nand2_1)                       0.024636  0.021060   0.160873 r
+  n64 (net)                      1     0.003056            0.000000   0.160873 r
+  U95/Y (scc9gena_nand2_1)                       0.017718  0.018238   0.179110 f
+  n69 (net)                      1     0.003392            0.000000   0.179110 f
+  U98/Y (scc9gena_a31oi_1)                       0.036924  0.032579   0.211689 r
+  ZeroCnt[0] (net)               1     0.001771            0.000000   0.211689 r
+  ZeroCnt[0] (out)                               0.036924  0.000000   0.211689 r
+  data arrival time                                                   0.211689
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.211689
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.005702
+
+
+  Startpoint: num[4] (input port clocked by vclk)
+  Endpoint: ZeroCnt[1] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 r
+  num[4] (in)                                    0.032375  0.014890   0.014890 r
+  num[4] (net)                   2     0.006675            0.000000   0.014890 r
+  U72/Y (scc9gena_inv_1)                         0.017303  0.017274   0.032164 f
+  n57 (net)                      2     0.006362            0.000000   0.032164 f
+  U106/Y (scc9gena_nand2_1)                      0.030845  0.028831   0.060995 r
+  n157 (net)                     2     0.004522            0.000000   0.060995 r
+  U189/Y (scc9gena_nand2_m)                      0.020920  0.021067   0.082062 f
+  n159 (net)                     1     0.001509            0.000000   0.082062 f
+  U84/Y (scc9gena_nand3_0)                       0.029624  0.028479   0.110541 r
+  n93 (net)                      1     0.001555            0.000000   0.110541 r
+  U83/Y (scc9gena_nand2_0)                       0.018640  0.019007   0.129548 f
+  n88 (net)                      1     0.001509            0.000000   0.129548 f
+  U73/Y (scc9gena_nand3_0)                       0.030409  0.027899   0.157448 r
+  n86 (net)                      1     0.001555            0.000000   0.157448 r
+  U80/Y (scc9gena_nand2_0)                       0.018858  0.019714   0.177162 f
+  n172 (net)                     1     0.001618            0.000000   0.177162 f
+  U192/Y (scc9gena_nor2_0)                       0.038534  0.034522   0.211683 r
+  ZeroCnt[1] (net)               1     0.001771            0.000000   0.211683 r
+  ZeroCnt[1] (out)                               0.038534  0.000000   0.211683 r
+  data arrival time                                                   0.211683
+
+  clock vclk (rise edge)                                   0.217391   0.217391
+  clock network delay (ideal)                              0.000000   0.217391
+  output external delay                                    0.000000   0.217391
+  data required time                                                  0.217391
+  -------------------------------------------------------------------------------
+  data required time                                                  0.217391
+  data arrival time                                                   -0.211683
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.005708
+
+
+1

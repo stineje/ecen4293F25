@@ -1,0 +1,145 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ECEN 4293 -- Numerical Methods with Python}
+\rhead{Timing Report Analysis Template}
+\rfoot{\thepage}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Timing Report Analysis and Regression Summary}\\[0.5em]
+{\large Oklahoma State University -- School of Electrical and Computer Engineering}\\[0.3em]
+Instructor: James E. Stine and Marcus Mellor \\[0.5em]
+{\small This report template should accompany your Python output and figures.}
+\end{center}
+
+\hrule
+\vspace{1em}
+
+\section*{1.\quad Report and Path Context}
+
+\begin{itemize}
+  \item \textbf{Report file:} \texttt{<filename>} \hfill \textbf{Date:} \texttt{<date>}
+  \item \textbf{Operating corner:} \texttt{<corner>} \hfill \textbf{Library:} \texttt{<libname>}
+  \item \textbf{Clock period:} \texttt{<value>}~ns
+  \item \textbf{Path:} \texttt{<startpoint>} $\rightarrow$ \texttt{<endpoint>} \quad
+        \textbf{Group:} \texttt{<group>} \quad
+        \textbf{Type:} \texttt{max/min}
+  \item \textbf{Arrival:} \texttt{<value>}~ns \quad
+        \textbf{Required:} \texttt{<value>}~ns \quad
+        \textbf{Slack:} \texttt{<value>}~ns
+  \item \textbf{Stages:} \texttt{<count>} \quad
+        \textbf{Pairing rule:} cell \texttt{incr} $\leftrightarrow$ preceding net (Cap, Fanout)
+  \item \textbf{Units:} Capacitance = \texttt{<unit>}, Slew = \texttt{<unit>}, Delay = \texttt{ns}, Fanout = \texttt{count}
+\end{itemize}
+
+\section*{2.\quad Data Summary}
+
+We extracted $N=\langle N\rangle$ cell–net pairs with nonzero incremental delay.  
+Missing fields handling: \texttt{<describe how missing fanout/cap/slew were treated>}.
+
+\begin{table}[h!]
+\centering
+\caption{Summary Statistics of Extracted Stage Data}
+\begin{tabular}{lrrrr}
+\toprule
+Variable & Mean & Std Dev & Min & Max \\
+\midrule
+Capacitance & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} \\
+Fanout & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} \\
+Input Slew & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} \\
+Incremental Delay & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} & \texttt{<..>} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{3.\quad Regression Models and Fit Quality}
+
+\subsection*{(a) Univariate Model}
+\[
+t_{\text{pd}} = a + b\,C
+\]
+\begin{itemize}
+  \item $a = \langle a \rangle$~ns (intrinsic delay)
+  \item $b = \langle b \rangle$~ns/unit-Cap (sensitivity)
+  \item $R^2 = \langle R^2_1 \rangle$
+  \item RMSE = \langle RMSE \rangle~ns
+\end{itemize}
+Interpretation: Every additional unit of capacitance increases incremental delay by approximately $b$ ns.
+
+\subsection*{(b) Multivariate Model (Capacitance + Fanout)}
+\[
+t_{\text{pd}} = a + b\,C + c\,F
+\]
+\begin{itemize}
+  \item $a = \langle a \rangle$, $b = \langle b \rangle$, $c = \langle c \rangle$
+  \item $R^2 = \langle R^2_2 \rangle$
+\end{itemize}
+Interpretation: Adding fanout explains $\langle more/less \rangle$ variance in incremental delay.
+
+\subsection*{(c) Trivariate Model (Capacitance + Fanout + Input Slew) (optional)}
+\[
+t_{\text{pd}} = a + b\,C + c\,F + d\,S
+\]
+\begin{itemize}
+  \item $a = \langle a \rangle$, $b = \langle b \rangle$, $c = \langle c \rangle$, $d = \langle d \rangle$
+  \item $R^2 = \langle R^2_3 \rangle$
+\end{itemize}
+Interpretation: Higher input 
+slew ($S$) values correspond to $\langle slower/faster \rangle$ transitions.  
+The coefficient $d$ quantifies this dependency.
+
+\subsection*{(d) Diagnostic Plots}
+Figures~\ref{fig:cumdelay}–\ref{fig:pred} summarize timing and regression fits.  This is just a placeholder for your plots.  You obviously should also upload your Python file too.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\linewidth]{delay.png}
+\caption{Cumulative delay along the selected timing path.}
+\label{fig:cumdelay}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{scatter_cap.png}
+\caption{Incremental delay vs.\ capacitance with univariate fit line.}
+\label{fig:scatter}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{predicted_vs_measured.png}
+\caption{Measured vs.\ predicted incremental delay (multivariate/trivariate models).}
+\label{fig:pred}
+\end{figure}
+
+\section*{4.\quad Discussion and Interpretation}
+
+\begin{itemize}
+  \item Which predictors (\texttt{Cap}, \texttt{Fanout}, \texttt{Slew}) had the largest influence?  
+  \item Did adding extra variables significantly improve $R^2$ or RMSE?  
+  \item Are there visible nonlinearities or outliers in residual plots?  
+  \item Which stages dominate total delay? Why (large capacitance, high fanout, complex cell)?  
+\end{itemize}
+
+\section*{5.\quad Conclusions}
+
+Summarize your findings:
+\begin{itemize}
+  \item Key quantitative results (coefficients, $R^2$).
+  \item How well linear regression captures delay behavior.
+  \item Whether nonlinear terms might help future modeling.
+  \item How automated timing parsing could scale up for SoC-level analysis.
+\end{itemize}
+
+\end{document}

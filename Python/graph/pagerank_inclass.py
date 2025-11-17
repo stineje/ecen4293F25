@@ -3,15 +3,16 @@ import matplotlib.pyplot as plt
 import networkx as nx
 
 # Define the initial state vector and Markov matrix
-v = np.array([0.1, 0.2, 0.1, 0.3, 0.1, 0.2])
+v0 = np.random.rand(6)
+v = v0/np.linalg.norm(v0,1)
 
 A = np.array([
-    [0.025, 0.025, 0.167, 0.025, 0.875, 0.025],  # Google
-    [0.45, 0.025, 0.167, 0.025, 0.025, 0.025],  # Facebook
-    [0.45, 0.025, 0.167, 0.875, 0.025, 0.308],  # YouTube
-    [0.025, 0.025, 0.167, 0.025, 0.025, 0.308],  # X
-    [0.025, 0.45, 0.167, 0.025, 0.025, 0.308],  # Wikipedia
-    [0.025, 0.45, 0.167, 0.025, 0.025, 0.025]  # Amazon
+    [0, 0, 1.0, 0, 1.0, 0],  # Google
+    [0.5, 0, 0, 0, 0, 0],   # Facebook
+    [0.5, 0, 0, 1.0, 0, 1/3],   # YouTube
+    [0, 0, 0, 0, 0, 1/3],  # X
+    [0, 0.5, 0, 0, 0, 1/3],   # Wikipedia
+    [0, 0.5, 0, 0, 0, 0]    # Amazon
 ])
 
 # Compute the sum of each column
@@ -24,7 +25,7 @@ A = np.divide(A, col_sum, where=col_sum != 0)
 states_over_time = [v]
 
 # Define how many iterations
-num_iterations = 15
+num_iterations = 20
 
 # Perform iterative matrix multiplication (Markov process)
 for i in range(1, num_iterations + 1):
@@ -58,7 +59,7 @@ plt.legend(loc='best')
 
 # Show the plot
 plt.grid(True)
-plt.savefig("pagerank_web.png", dpi=300, bbox_inches='tight')
+plt.savefig("pagerank_inclass.png", dpi=300, bbox_inches='tight')
 plt.show()
 
 # Create a directed graph using NetworkX from the adjacency matrix (normalized)

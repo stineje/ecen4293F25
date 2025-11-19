@@ -25,8 +25,8 @@ N = 128            # <-- Set any size you want: 8, 12, 64, 128, etc.
 block_size = 16    # <-- Must divide N evenly
 
 # Generate random N×N matrices A and B
-A = np.random.randint(0, 10, (N, N))
-B = np.random.randint(0, 10, (N, N))
+A = np.random.randint(0, 100, (N, N))
+B = np.random.randint(0, 100, (N, N))
 
 # Perform block multiplication
 C = block_multiply(A, B, block_size)

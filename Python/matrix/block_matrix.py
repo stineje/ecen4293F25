@@ -7,10 +7,8 @@ B = np.random.randint(0, 10, (8, 8))
 # Define the size of the blocks (e.g., 4x4)
 block_size = 2
 
-# Function to perform block matrix multiplication
-
-
 def block_multiply(A, B, block_size):
+    """ Function to perform block matrix multiplication """
     n = A.shape[0]
     C = np.zeros((n, n), dtype=int)
 

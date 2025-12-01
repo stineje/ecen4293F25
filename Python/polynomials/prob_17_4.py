@@ -93,6 +93,7 @@ plt.ylabel("y")
 plt.title("Newton and Lagrange Polynomial Interpolation at x = 4")
 plt.legend()
 plt.grid(True)
+plt.savefig("prob_17_4.png", dpi=300)
 plt.show()
 
 # Print the estimates with more detail

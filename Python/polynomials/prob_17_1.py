@@ -33,6 +33,7 @@ yplot = np.polyval(coef, xplot)
 # Plot the polynomial fit
 plt.plot(xplot, yplot, c='k', linestyle='--', label="Quadratic Fit")
 plt.legend()
+plt.savefig("prob_17_1.png", dpi=300)
 
 # Calculate the residuals (errors) of the polynomial fit at the original x points
 yp = np.polyval(coef, x)

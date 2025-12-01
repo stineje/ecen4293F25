@@ -1,79 +1,79 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Given data points
+# Given data points from the table
+# x: 0, 1, 2.5, 3, 4.5, 5, 6
+# y: 2, 5.4375, 7.3516, 7.5625, 8.4453, 9.1875, 12
 data_points = np.array([
-    (0, 0.5),
-    (1, 3.134),
-    (2, 5.3),
-    (5.5, 9.9),
-    (11, 10.2),
-    (13, 9.35),
-    (16, 7.2),
-    (18, 6.2)
+    (0.0, 2.0),
+    (1.0, 5.4375),
+    (2.5, 7.3516),
+    (3.0, 7.5625),
+    (4.5, 8.4453),
+    (5.0, 9.1875),
+    (6.0, 12.0)
 ])
 
-# Step 1: Sort points around x = 8 to maximize interpolation accuracy
-# Sort by the distance from x = 8
-centered_data_points = data_points[np.argsort(abs(data_points[:, 0] - 8))]
+x_target = 3.5  # we want y(3.5)
 
+# --- Step 1: order points to be centered around x_target ---
+centered_data_points = data_points[np.argsort(
+    np.abs(data_points[:, 0] - x_target)
+)]
+
+print("x-values ordered by closeness to 3.5:")
+print(centered_data_points[:, 0])
 
 def divided_differences(x, y):
-    """ Function to calculate divided differences """
+    """Compute the divided-difference table and return Newton coefficients."""
     n = len(y)
-    coef = np.zeros([n, n])
+    coef = np.zeros((n, n))
     coef[:, 0] = y
     for j in range(1, n):
         for i in range(n - j):
-            coef[i][j] = (coef[i + 1][j - 1] - coef[i]
-                          [j - 1]) / (x[i + j] - x[i])
-    return coef[0]
-
+            coef[i, j] = (coef[i + 1, j - 1] - coef[i, j - 1]) / (x[i + j] - x[i])
+    return coef[0]  # first row: coefficients for Newton form
 
 def newton_polynomial(coef, x_data, x):
-    """ Function to calculate Newton's interpolating polynomial at x = 8 """
+    """Evaluate Newton’s interpolating polynomial with coefficients coef at x."""
     n = len(coef) - 1
     p = coef[n]
     for k in range(1, n + 1):
         p = coef[n - k] + (x - x_data[n - k]) * p
     return p
 
-
-# Compute finite divided differences and interpolate with optimal ordering
+# --- Step 2: build Newton polynomial using centered ordering ---
 x_centered = centered_data_points[:, 0]
 y_centered = centered_data_points[:, 1]
-coef_centered = divided_differences(x_centered, y_centered)
-estimate_centered = newton_polynomial(coef_centered, x_centered, 8)
 
-# Compute finite divided differences and interpolate with original ordering
+coef_centered = divided_differences(x_centered, y_centered)
+y_approx = newton_polynomial(coef_centered, x_centered, x_target)
+
+print(f"\nNewton interpolant estimate at x = {x_target}: {y_approx:.6f}")
+
+# (Optional) Compare with original ordering to show same mathematical value
 x_original = data_points[:, 0]
 y_original = data_points[:, 1]
 coef_original = divided_differences(x_original, y_original)
-estimate_original = newton_polynomial(coef_original, x_original, 8)
+y_approx_original = newton_polynomial(coef_original, x_original, x_target)
+print(f"Using original order (for comparison): {y_approx_original:.6f}")
 
-# Plotting the results
-x_vals = np.linspace(0, 18, 200)
-y_centered_vals = [newton_polynomial(
-    coef_centered, x_centered, xv) for xv in x_vals]
-y_original_vals = [newton_polynomial(
-    coef_original, x_original, xv) for xv in x_vals]
+# --- Step 3: plot interpolant and data points ---
+x_plot = np.linspace(0.0, 6.0, 400)
+y_plot = [newton_polynomial(coef_centered, x_centered, xv) for xv in x_plot]
 
-plt.figure(figsize=(12, 6))
-plt.plot(x_vals, y_centered_vals,
-         label='Centered Data Interpolation', linestyle='--')
-plt.plot(x_vals, y_original_vals,
-         label='Original Order Interpolation', linestyle=':')
+plt.figure(figsize=(8, 5))
+plt.plot(x_plot, y_plot, label="Newton interpolant", linestyle="--")
 plt.scatter(data_points[:, 0], data_points[:, 1],
-            color='red', label='Data Points')
-plt.scatter(8, estimate_centered, color='blue',
-            label=f'Estimate (Centered): {estimate_centered:.4f}', marker='x')
-plt.scatter(8, estimate_original, color='green',
-            label=f'Estimate (Original): {estimate_original:.4f}', marker='x')
-plt.legend()
-plt.xlabel('x')
-plt.ylabel('Interpolated y')
-plt.title('Newton Interpolation Comparison at x = 8')
-plt.grid(True)
-plt.show()
+            color="red", label="Data points")
+plt.scatter(x_target, y_approx, color="blue",
+            label=f"y(3.5) ≈ {y_approx:.4f}", marker="x")
 
-estimate_centered, estimate_original
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Newton Interpolation centered around x = 3.5")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.savefig("prob_17_2.png", dpi=300)
+plt.show()

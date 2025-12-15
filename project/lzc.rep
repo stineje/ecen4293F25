@@ -1,0 +1,70 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : lzc
+Version: W-2024.09-SP4-1
+Date   : Mon Nov 10 13:01:00 2025
+****************************************
+
+Operating Conditions: PVT_1P2V_25C   Library: scc9gena_tt_1.2v_25C
+Wire Load Model Mode: top
+
+  Startpoint: num[1] (input port clocked by vclk)
+  Endpoint: ZeroCnt[0] (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock vclk (rise edge)                                   0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     0.000000   0.000000 f
+  num[1] (in)                                    0.013723  0.003338   0.003338 f
+  num[1] (net)                   2     0.002046            0.000000   0.003338 f
+  U109/Y (scc9gena_inv_m)                        0.019520  0.019675   0.023013 r
+  n83 (net)                      1     0.000980            0.000000   0.023013 r
+  U110/Y (scc9gena_a21oi_m)                      0.017687  0.019620   0.042633 f
+  n84 (net)                      1     0.001011            0.000000   0.042633 f
+  U111/Y (scc9gena_a221oi_m)                     0.100374  0.087329   0.129961 r
+  n86 (net)                      1     0.000991            0.000000   0.129961 r
+  U112/Y (scc9gena_a221oi_m)                     0.034354  0.030769   0.160731 f
+  n88 (net)                      1     0.001011            0.000000   0.160731 f
+  U113/Y (scc9gena_a221oi_m)                     0.100376  0.090022   0.250753 r
+  n90 (net)                      1     0.000991            0.000000   0.250753 r
+  U114/Y (scc9gena_a221oi_m)                     0.034354  0.030769   0.281523 f
+  n92 (net)                      1     0.001011            0.000000   0.281523 f
+  U115/Y (scc9gena_a221oi_m)                     0.100376  0.090023   0.371545 r
+  n94 (net)                      1     0.000991            0.000000   0.371545 r
+  U116/Y (scc9gena_a221oi_m)                     0.034354  0.030769   0.402314 f
+  n96 (net)                      1     0.001011            0.000000   0.402314 f
+  U117/Y (scc9gena_a221oi_m)                     0.100374  0.090023   0.492337 r
+  n98 (net)                      1     0.000991            0.000000   0.492337 r
+  U118/Y (scc9gena_a221oi_m)                     0.034354  0.030769   0.523106 f
+  n100 (net)                     1     0.001011            0.000000   0.523106 f
+  U119/Y (scc9gena_a221oi_m)                     0.100374  0.090022   0.613129 r
+  n102 (net)                     1     0.000991            0.000000   0.613129 r
+  U120/Y (scc9gena_a221oi_m)                     0.034354  0.030769   0.643898 f
+  n104 (net)                     1     0.001011            0.000000   0.643898 f
+  U121/Y (scc9gena_a221oi_m)                     0.134891  0.113883   0.757781 r
+  ZeroCnt[0] (net)               1     0.001771            0.000000   0.757781 r
+  ZeroCnt[0] (out)                               0.134891  0.000000   0.757781 r
+  data arrival time                                                   0.757781
+
+  clock vclk (rise edge)                                   2.857143   2.857143
+  clock network delay (ideal)                              0.000000   2.857143
+  output external delay                                    0.000000   2.857143
+  data required time                                                  2.857143
+  -------------------------------------------------------------------------------
+  data required time                                                  2.857143
+  data arrival time                                                   -0.757781
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         2.099362
+
+
